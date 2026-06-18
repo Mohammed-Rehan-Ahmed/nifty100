@@ -1,0 +1,44 @@
+presets:
+  quality_compounder:
+    min_roe: 15
+    max_de: 1.0
+    min_fcf: 0
+    min_revenue_cagr_5yr: 10
+    rank_by: composite_score
+
+  value_pick:
+    max_pe: 20
+    max_pb: 3.0
+    max_de: 2.0
+    min_dividend_yield: 1
+    rank_by: fcf_yield
+
+  growth_accelerator:
+    min_pat_cagr_5yr: 20
+    min_revenue_cagr_5yr: 15
+    max_de: 2.0
+    rank_by: pat_cagr_5yr
+
+  dividend_champion:
+    min_dividend_yield: 2
+    max_dividend_payout: 80
+    min_fcf: 0
+    rank_by: dividend_yield
+
+  debt_free_blue_chip:
+    max_de: 0
+    min_roe: 12
+    min_revenue: 5000
+    rank_by: roe
+
+  turnaround_watch:
+    min_revenue_cagr_3yr: 10
+    min_fcf_latest: 0
+    rank_by: revenue_cagr_3yr
+
+thresholds:
+  composite_score:
+    profitability_weight: 0.35
+    cash_quality_weight: 0.30
+    growth_weight: 0.20
+    leverage_weight: 0.15

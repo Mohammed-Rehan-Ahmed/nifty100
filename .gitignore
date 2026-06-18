@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+env/
+ENV/
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local Data & Database Outputs (Keep raw files if needed, but skip generated binaries/logs)
+data/nifty100.db
+data/load_audit.csv
+data/validation_failures.csv
+
+# Environment configurations containing credentials
+.env
