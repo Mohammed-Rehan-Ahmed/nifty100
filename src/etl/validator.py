@@ -1,223 +1,324 @@
-from __future__ import annotations
-
-import pandas as pd
-
+import re
 import logging
 import pandas as pd
 from typing import Dict, List
+
 logger = logging.getLogger(__name__)
 
-FAILURES = []
+TIME_SERIES_TABLES = (
+    "profitandloss", "balancesheet", "cashflow",
+    "financial_ratios", "market_cap"
+)
 
 
-def _flag(rule_id: str, table: str, company_id, year, field: str,
-          issue: str, severity: str) -> None:
-    FAILURES.append({
+def _flag(failures: List[dict], rule_id: str, table: str,
+          company_id, year, field: str, issue: str, severity: str) -> None:
+    failures.append({
         "rule_id":    rule_id,
         "table":      table,
-        "company_id": company_id,
-        "year":       year,
+        "company_id": str(company_id) if company_id is not None else None,
+        "year":       str(year)       if year       is not None else None,
         "field":      field,
         "issue":      issue,
         "severity":   severity,
     })
 
 
-def dq01_company_pk_unique(companies: pd.DataFrame) -> None:
+# ── CRITICAL ──────────────────────────────────────────────────────────────────
+
+def dq01_company_pk_unique(dfs: Dict[str, pd.DataFrame],
+                           failures: List[dict]) -> None:
     """DQ-01: companies.id must be unique."""
-    dupes = companies[companies["id"].duplicated()]
+    df = dfs.get("companies")
+    if df is None: return
+    dupes = df[df["id"].duplicated(keep=False)]
     for _, row in dupes.iterrows():
-        _flag("DQ-01", "companies", row["id"], None,
-              "id", "Duplicate company PK", "CRITICAL")
+        _flag(failures, "DQ-01", "companies", row["id"], None,
+              "id", f"Duplicate company PK: {row['id']}", "CRITICAL")
 
 
-def dq02_annual_pk_unique(dfs: dict[str, pd.DataFrame]) -> None:
-    """DQ-02: No duplicate (company_id, year) in time-series tables."""
-    for table in ("profitandloss", "balancesheet", "cashflow"):
-        df = dfs.get(table)
-        if df is None:
-            continue
-        dupes = df[df.duplicated(subset=["company_id", "year"], keep=False)]
-        for _, row in dupes.iterrows():
-            _flag("DQ-02", table, row["company_id"], row["year"],
-                  "company_id+year", "Duplicate annual PK", "CRITICAL")
+def dq02_pl_pk_unique(dfs: Dict[str, pd.DataFrame],
+                      failures: List[dict]) -> None:
+    """DQ-02: No duplicate (company_id, year) in profitandloss."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    dupes = df[df.duplicated(subset=["company_id", "year"], keep=False)]
+    for _, row in dupes.iterrows():
+        _flag(failures, "DQ-02", "profitandloss",
+              row["company_id"], row["year"],
+              "company_id+year", "Duplicate PK", "CRITICAL")
 
 
-def dq03_fk_integrity(dfs: dict[str, pd.DataFrame]) -> None:
-    """DQ-03: All company_id values must exist in companies.id."""
-    valid_ids = set(dfs["companies"]["id"].dropna())
-    child_tables = ["profitandloss", "balancesheet", "cashflow",
-                    "analysis", "documents", "prosandcons",
-                    "financial_ratios", "market_cap", "peer_groups",
-                    "sectors", "stock_prices"]
+def dq03_bs_pk_unique(dfs: Dict[str, pd.DataFrame],
+                      failures: List[dict]) -> None:
+    """DQ-03: No duplicate (company_id, year) in balancesheet."""
+    df = dfs.get("balancesheet")
+    if df is None: return
+    dupes = df[df.duplicated(subset=["company_id", "year"], keep=False)]
+    for _, row in dupes.iterrows():
+        _flag(failures, "DQ-03", "balancesheet",
+              row["company_id"], row["year"],
+              "company_id+year", "Duplicate PK", "CRITICAL")
+
+
+def dq04_cf_pk_unique(dfs: Dict[str, pd.DataFrame],
+                      failures: List[dict]) -> None:
+    """DQ-04: No duplicate (company_id, year) in cashflow."""
+    df = dfs.get("cashflow")
+    if df is None: return
+    dupes = df[df.duplicated(subset=["company_id", "year"], keep=False)]
+    for _, row in dupes.iterrows():
+        _flag(failures, "DQ-04", "cashflow",
+              row["company_id"], row["year"],
+              "company_id+year", "Duplicate PK", "CRITICAL")
+
+
+def dq05_fk_integrity(dfs: Dict[str, pd.DataFrame],
+                      failures: List[dict]) -> None:
+    """DQ-05: All company_id values must exist in companies.id."""
+    companies = dfs.get("companies")
+    if companies is None: return
+    valid_ids = set(companies["id"].dropna().str.strip().str.upper())
+
+    child_tables = [
+        "profitandloss", "balancesheet", "cashflow", "analysis",
+        "documents", "prosandcons", "financial_ratios",
+        "market_cap", "peer_groups", "sectors", "stock_prices",
+    ]
     for table in child_tables:
         df = dfs.get(table)
-        if df is None:
-            continue
-        col = "company_id"
-        if col not in df.columns:
-            continue
-        orphans = df[~df[col].isin(valid_ids)]
+        if df is None or "company_id" not in df.columns: continue
+        orphans = df[~df["company_id"].isin(valid_ids)]
         for _, row in orphans.iterrows():
-            _flag("DQ-03", table, row[col], row.get("year"),
-                  col, "Orphan FK — not in companies.id", "CRITICAL")
+            _flag(failures, "DQ-05", table,
+                  row["company_id"], row.get("year"),
+                  "company_id",
+                  f"Orphan FK '{row['company_id']}' not in companies.id",
+                  "CRITICAL")
 
 
-def dq04_bs_balance(balancesheet: pd.DataFrame) -> None:
-    """DQ-04: |total_assets - total_liabilities| / total_assets < 1%."""
-    df = balancesheet.copy()
-    df["_diff"] = abs(df["total_assets"] - df["total_liabilities"]) / df["total_assets"].replace(0, pd.NA)
-    flagged = df[df["_diff"] > 0.01]
-    for _, row in flagged.iterrows():
-        _flag("DQ-04", "balancesheet", row["company_id"], row["year"],
-              "total_assets/total_liabilities",
-              f"BS imbalance: diff={round(row['_diff']*100,2)}%", "WARNING")
+def dq06_stock_price_date_format(dfs: Dict[str, pd.DataFrame],
+                                  failures: List[dict]) -> None:
+    """DQ-06: stock_prices.date must match ISO YYYY-MM-DD (optional timestamp)."""
+    df = dfs.get("stock_prices")
+    if df is None or "date" not in df.columns: return
+    pattern = re.compile(r"^\d{4}-\d{2}-\d{2}(\s+\d{2}:\d{2}:\d{2})?$")
+    bad = df[~df["date"].astype(str).str.strip().str.match(pattern)]
+    for _, row in bad.iterrows():
+        _flag(failures, "DQ-06", "stock_prices",
+              row.get("company_id"), None,
+              "date",
+              f"Invalid date format: '{row['date']}'",
+              "CRITICAL")
 
-
-def dq05_opm_crosscheck(pl: pd.DataFrame) -> None:
-    """DQ-05: |opm_percentage - computed_opm| < 1%."""
-    df = pl.copy()
-    df["_computed_opm"] = df["operating_profit"] / df["sales"].replace(0, pd.NA) * 100
-    df["_diff"] = abs(df["opm_percentage"] - df["_computed_opm"])
-    flagged = df[df["_diff"] > 1.0]
-    for _, row in flagged.iterrows():
-        _flag("DQ-05", "profitandloss", row["company_id"], row["year"],
-              "opm_percentage", f"OPM mismatch: {round(row['_diff'],2)}%", "WARNING")
-
-
-def dq06_positive_sales(pl: pd.DataFrame) -> None:
-    """DQ-06: sales > 0."""
-    flagged = pl[pl["sales"] <= 0]
-    for _, row in flagged.iterrows():
-        _flag("DQ-06", "profitandloss", row["company_id"], row["year"],
-              "sales", f"sales={row['sales']}", "WARNING")
-
-
-def dq07_year_format(dfs: dict[str, pd.DataFrame]) -> None:
-    """DQ-07: All year values match YYYY-MM after normalisation."""
-    import re
-    for table in ("profitandloss", "balancesheet", "cashflow", "financial_ratios"):
+def dq07_year_format(dfs: Dict[str, pd.DataFrame],
+                     failures: List[dict]) -> None:
+    """DQ-07: All year values must match YYYY-MM after normalisation."""
+    pattern = re.compile(r"^\d{4}-\d{2}$")
+    for table in TIME_SERIES_TABLES:
         df = dfs.get(table)
-        if df is None or "year" not in df.columns:
-            continue
-        bad = df[~df["year"].astype(str).str.match(r"^\d{4}-\d{2}$")]
+        if df is None or "year" not in df.columns: continue
+        bad = df[~df["year"].astype(str).str.match(pattern)]
         for _, row in bad.iterrows():
-            _flag("DQ-07", table, row.get("company_id"), row["year"],
-                  "year", f"Bad year format: {row['year']}", "CRITICAL")
+            _flag(failures, "DQ-07", table,
+                  row.get("company_id"), row["year"],
+                  "year",
+                  f"Unparseable year: '{row['year']}'",
+                  "CRITICAL")
 
 
-def dq08_ticker_format(dfs: dict[str, pd.DataFrame]) -> None:
-    """DQ-08: company_id length 2-12 chars, already normalised."""
-    for table, col in [("companies", "id")] + \
-                      [(t, "company_id") for t in ("profitandloss", "balancesheet",
-                       "cashflow", "sectors", "peer_groups")]:
+def dq08_ticker_format(dfs: Dict[str, pd.DataFrame],
+                       failures: List[dict]) -> None:
+    """DQ-08: Ticker must be 2-12 uppercase alphanumeric chars."""
+    pattern = re.compile(r"^[A-Z0-9&\-]{2,12}$")
+    checks = [("companies", "id")] + [
+        (t, "company_id") for t in (
+            "profitandloss", "balancesheet", "cashflow",
+            "sectors", "peer_groups", "documents", "prosandcons"
+        )
+    ]
+    for table, col in checks:
         df = dfs.get(table)
-        if df is None:
-            continue
-        bad = df[~df[col].astype(str).str.match(r"^[A-Z0-9&\-]{2,12}$")]
+        if df is None or col not in df.columns: continue
+        bad = df[~df[col].astype(str).str.match(pattern)]
         for _, row in bad.iterrows():
-            _flag("DQ-08", table, row[col], None,
-                  col, f"Invalid ticker: {row[col]}", "CRITICAL")
+            _flag(failures, "DQ-08", table,
+                  row[col], None, col,
+                  f"Invalid ticker format: '{row[col]}'",
+                  "CRITICAL")
 
 
-def dq09_net_cash_check(cashflow: pd.DataFrame) -> None:
-    """DQ-09: net_cash_flow == CFO + CFI + CFF within 10 Cr."""
-    df = cashflow.copy()
-    df["_computed"] = (df["operating_activity"] +
-                       df["investing_activity"] +
-                       df["financing_activity"])
-    flagged = df[abs(df["net_cash_flow"] - df["_computed"]) > 10]
-    for _, row in flagged.iterrows():
-        _flag("DQ-09", "cashflow", row["company_id"], row["year"],
-              "net_cash_flow",
-              f"Mismatch: reported={row['net_cash_flow']}, computed={row['_computed']:.1f}",
+# ── WARNING ───────────────────────────────────────────────────────────────────
+
+def dq09_opm_crosscheck(dfs: Dict[str, pd.DataFrame],
+                        failures: List[dict]) -> None:
+    """DQ-09: (sales - expenses) should equal operating_profit within 1%."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    df = df.copy()
+    df["_computed_op"] = df["sales"].fillna(0) - df["expenses"].fillna(0)
+    df["_diff"] = (df["_computed_op"] - df["operating_profit"].fillna(0)).abs()
+    threshold = (df["sales"].fillna(0).abs() * 0.01).clip(lower=1)
+    for _, row in df[df["_diff"] > threshold].iterrows():
+        _flag(failures, "DQ-09", "profitandloss",
+              row["company_id"], row["year"],
+              "operating_profit",
+              f"sales-expenses={round(row['_computed_op'],2)} "
+              f"!= operating_profit={round(row['operating_profit'],2)} "
+              f"(diff={round(row['_diff'],2)})",
               "WARNING")
 
 
-def dq10_nonneg_fixed_assets(balancesheet: pd.DataFrame) -> None:
-    """DQ-10: fixed_assets >= 0."""
-    flagged = balancesheet[balancesheet["fixed_assets"] < 0]
+def dq10_opm_pct_crosscheck(dfs: Dict[str, pd.DataFrame],
+                             failures: List[dict]) -> None:
+    """DQ-10: opm_percentage should match computed OPM within 1 point."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    df = df.copy()
+    mask = df["sales"].fillna(0) > 0
+    df.loc[mask, "_computed_opm"] = (
+        df.loc[mask, "operating_profit"] / df.loc[mask, "sales"] * 100
+    )
+    df["_pct_diff"] = (
+        df["opm_percentage"].fillna(0) - df["_computed_opm"].fillna(0)
+    ).abs()
+    for _, row in df[mask & (df["_pct_diff"] > 1.0)].iterrows():
+        _flag(failures, "DQ-10", "profitandloss",
+              row["company_id"], row["year"],
+              "opm_percentage",
+              f"Stored OPM={row['opm_percentage']} vs "
+              f"computed={round(row.get('_computed_opm', 0), 2)} "
+              f"(diff={round(row['_pct_diff'], 2)}pp)",
+              "WARNING")
+
+
+def dq11_bs_balance(dfs: Dict[str, pd.DataFrame],
+                    failures: List[dict]) -> None:
+    """DQ-11: total_assets must equal total_liabilities within 1%."""
+    df = dfs.get("balancesheet")
+    if df is None: return
+    df = df.copy()
+    mask = df["total_assets"].fillna(0) > 0
+    df.loc[mask, "_diff_pct"] = (
+        (df.loc[mask, "total_assets"] - df.loc[mask, "total_liabilities"]).abs()
+        / df.loc[mask, "total_assets"] * 100
+    )
+    for _, row in df[mask & (df["_diff_pct"] > 1.0)].iterrows():
+        _flag(failures, "DQ-11", "balancesheet",
+              row["company_id"], row["year"],
+              "total_assets",
+              f"Assets={row['total_assets']} != "
+              f"Liabilities={row['total_liabilities']} "
+              f"(diff={round(row.get('_diff_pct', 0), 2)}%)",
+              "WARNING")
+
+
+def dq12_positive_sales(dfs: Dict[str, pd.DataFrame],
+                        failures: List[dict]) -> None:
+    """DQ-12: sales must be > 0."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    for _, row in df[df["sales"].fillna(0) <= 0].iterrows():
+        _flag(failures, "DQ-12", "profitandloss",
+              row["company_id"], row["year"],
+              "sales",
+              f"sales={row['sales']} is zero or negative",
+              "WARNING")
+
+
+def dq13_analysis_text_quality(dfs: Dict[str, pd.DataFrame],
+                                failures: List[dict]) -> None:
+    """DQ-13: analysis text fields must be regex-parseable."""
+    df = dfs.get("analysis")
+    if df is None: return
+    pattern = re.compile(r"\d+\s*Years?:?\s*[\d.]+\s*%", re.IGNORECASE)
+    text_cols = ["compounded_sales_growth", "compounded_profit_growth",
+                 "stock_price_cagr", "roe"]
+    for col in text_cols:
+        if col not in df.columns: continue
+        for _, row in df.iterrows():
+            val = str(row[col]).strip() if pd.notna(row[col]) else ""
+            if not val or val.lower() in ("nan", "none", "-"): continue
+            if not pattern.search(val):
+                _flag(failures, "DQ-13", "analysis",
+                      row["company_id"], None, col,
+                      f"Unparseable text: '{val}'",
+                      "WARNING")
+
+
+def dq14_eps_sign(dfs: Dict[str, pd.DataFrame],
+                  failures: List[dict]) -> None:
+    """DQ-14: eps must be > 0 when net_profit > 0."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    flagged = df[(df["net_profit"].fillna(0) > 0) &
+                 (df["eps"].fillna(0) <= 0)]
     for _, row in flagged.iterrows():
-        _flag("DQ-10", "balancesheet", row["company_id"], row["year"],
-              "fixed_assets", f"Negative fixed_assets={row['fixed_assets']}", "WARNING")
+        _flag(failures, "DQ-14", "profitandloss",
+              row["company_id"], row["year"],
+              "eps",
+              f"net_profit={row['net_profit']} > 0 but eps={row['eps']}",
+              "WARNING")
 
 
-def dq11_tax_rate_range(pl: pd.DataFrame) -> None:
-    """DQ-11: 0 <= tax_percentage <= 60."""
-    flagged = pl[(pl["tax_percentage"] < 0) | (pl["tax_percentage"] > 60)]
-    for _, row in flagged.iterrows():
-        _flag("DQ-11", "profitandloss", row["company_id"], row["year"],
-              "tax_percentage", f"Out of range: {row['tax_percentage']}", "WARNING")
+def dq15_dividend_payout_cap(dfs: Dict[str, pd.DataFrame],
+                              failures: List[dict]) -> None:
+    """DQ-15: dividend_payout > 200% is likely a data error."""
+    df = dfs.get("profitandloss")
+    if df is None: return
+    for _, row in df[df["dividend_payout"].fillna(0) > 200].iterrows():
+        _flag(failures, "DQ-15", "profitandloss",
+              row["company_id"], row["year"],
+              "dividend_payout",
+              f"Payout={row['dividend_payout']}% exceeds 200% cap",
+              "WARNING")
 
 
-def dq12_dividend_payout_cap(pl: pd.DataFrame) -> None:
-    """DQ-12: dividend_payout <= 200%."""
-    flagged = pl[pl["dividend_payout"] > 200]
-    for _, row in flagged.iterrows():
-        _flag("DQ-12", "profitandloss", row["company_id"], row["year"],
-              "dividend_payout", f"Payout={row['dividend_payout']}%", "WARNING")
+def dq16_coverage_check(dfs: Dict[str, pd.DataFrame],
+                        failures: List[dict]) -> None:
+    """DQ-16: Each company needs >= 5 years of data in all time-series tables."""
+    companies = dfs.get("companies")
+    if companies is None: return
+    all_ids = set(companies["id"].dropna())
 
-
-def dq13_url_validity(documents: pd.DataFrame) -> None:
-    """DQ-13: Check Annual_Report URLs return 200 (sample only — costly)."""
-    # Full URL check is done in loader post-load to avoid blocking ETL
-    # Flagged rows logged as WARNING only; do not reject
-    missing = documents[documents["Annual_Report"].isna()]
-    for _, row in missing.iterrows():
-        _flag("DQ-13", "documents", row["company_id"], row.get("Year"),
-              "Annual_Report", "Missing URL", "WARNING")
-
-
-def dq14_eps_sign(pl: pd.DataFrame) -> None:
-    """DQ-14: eps > 0 if net_profit > 0."""
-    flagged = pl[(pl["net_profit"] > 0) & (pl["eps"] <= 0)]
-    for _, row in flagged.iterrows():
-        _flag("DQ-14", "profitandloss", row["company_id"], row["year"],
-              "eps", f"eps={row['eps']} but net_profit={row['net_profit']}", "WARNING")
-
-
-def dq15_bs_strict_balance(balancesheet: pd.DataFrame) -> None:
-    """DQ-15: total_liabilities == total_assets (strict — INFO only)."""
-    flagged = balancesheet[balancesheet["total_assets"] != balancesheet["total_liabilities"]]
-    for _, row in flagged.iterrows():
-        _flag("DQ-15", "balancesheet", row["company_id"], row["year"],
-              "total_assets", "Strict BS imbalance (informational)", "INFO")
-
-
-def dq16_coverage_check(dfs: dict[str, pd.DataFrame]) -> None:
-    """DQ-16: Each company must have >= 5 years of P&L, BS, CF records."""
-    for table in ("profitandloss", "balancesheet", "cashflow"):
+    for table in TIME_SERIES_TABLES:
         df = dfs.get(table)
-        if df is None:
-            continue
-        counts = df.groupby("company_id")["year"].count()
-        low = counts[counts < 5]
-        for cid, cnt in low.items():
-            _flag("DQ-16", table, cid, None,
-                  "year", f"Only {cnt} years of data (min 5 required)", "WARNING")
+        if df is None or "year" not in df.columns: continue
+        counts = df.groupby("company_id")["year"].nunique()
+        for cid in all_ids:
+            yr_count = int(counts.get(cid, 0))
+            if yr_count < 5:
+                _flag(failures, "DQ-16", table,
+                      cid, None, "year",
+                      f"Only {yr_count} years of data (minimum 5 required)",
+                      "WARNING")
 
 
-def run_all_validations(dfs: dict[str, pd.DataFrame]) -> list[dict]:
-    """Run all 16 DQ rules. Returns list of failure dicts."""
-    FAILURES.clear()
+# ── Runner ────────────────────────────────────────────────────────────────────
 
-    dq01_company_pk_unique(dfs["companies"])
-    dq02_annual_pk_unique(dfs)
-    dq03_fk_integrity(dfs)
-    dq04_bs_balance(dfs["balancesheet"])
-    dq05_opm_crosscheck(dfs["profitandloss"])
-    dq06_positive_sales(dfs["profitandloss"])
-    dq07_year_format(dfs)
-    dq08_ticker_format(dfs)
-    dq09_net_cash_check(dfs["cashflow"])
-    dq10_nonneg_fixed_assets(dfs["balancesheet"])
-    dq11_tax_rate_range(dfs["profitandloss"])
-    dq12_dividend_payout_cap(dfs["profitandloss"])
-    dq13_url_validity(dfs["documents"])
-    dq14_eps_sign(dfs["profitandloss"])
-    dq15_bs_strict_balance(dfs["balancesheet"])
-    dq16_coverage_check(dfs)
+def run_all_validations(dfs: Dict[str, pd.DataFrame]) -> List[dict]:
+    """Execute all 16 DQ rules. Returns list of failure dicts."""
+    failures: List[dict] = []
 
-    critical = sum(1 for f in FAILURES if f["severity"] == "CRITICAL")
-    logger.info("DQ complete: %d issues (%d CRITICAL)", len(FAILURES), critical)
-    return FAILURES
+    dq01_company_pk_unique(dfs, failures)
+    dq02_pl_pk_unique(dfs, failures)
+    dq03_bs_pk_unique(dfs, failures)
+    dq04_cf_pk_unique(dfs, failures)
+    dq05_fk_integrity(dfs, failures)
+    dq06_stock_price_date_format(dfs, failures)
+    dq07_year_format(dfs, failures)
+    dq08_ticker_format(dfs, failures)
+    dq09_opm_crosscheck(dfs, failures)
+    dq10_opm_pct_crosscheck(dfs, failures)
+    dq11_bs_balance(dfs, failures)
+    dq12_positive_sales(dfs, failures)
+    dq13_analysis_text_quality(dfs, failures)
+    dq14_eps_sign(dfs, failures)
+    dq15_dividend_payout_cap(dfs, failures)
+    dq16_coverage_check(dfs, failures)
+
+    critical = sum(1 for f in failures if f["severity"] == "CRITICAL")
+    warning  = sum(1 for f in failures if f["severity"] == "WARNING")
+    logger.info("DQ complete — CRITICAL: %d | WARNING: %d | TOTAL: %d",
+                critical, warning, len(failures))
+    return failures

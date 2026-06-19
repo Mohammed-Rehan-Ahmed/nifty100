@@ -9,16 +9,25 @@ MONTH_MAP = {
     "sep": "09", "oct": "10", "nov": "11", "dec": "12",
 }
 
-
 def normalize_year(raw) -> str:
-    """Convert any year label to YYYY-MM. Returns PARSE_ERROR on failure."""
+    """Convert any year label to YYYY-MM. Returns None on failure."""
     if raw is None:
-        return "PARSE_ERROR"
+        return None
+
     s = str(raw).strip()
+
+    # Silent drop — TTM is a rolling period, not a fixed fiscal year.
+    if s.upper() == "TTM":
+        return None
 
     # Already clean: 2023-03
     if re.match(r"^\d{4}-\d{2}$", s):
         return s
+
+    # Float year from Excel: "2024.5" or "2024.0" → "2024-03"
+    m = re.match(r"^(\d{4})\.[\d]+$", s)
+    if m:
+        return f"{m.group(1)}-03"
 
     # "Mar 2014" / "Dec 2012"
     m = re.match(r"^([A-Za-z]{3})\s+(\d{4})$", s)
@@ -27,12 +36,17 @@ def normalize_year(raw) -> str:
         if mon:
             return f"{m.group(2)}-{mon}"
 
+    # Messy: "Mar 2016 9m" / "Mar 2023 15" — extract 4-digit year
+    m = re.match(r"^[A-Za-z]{3}\s+(\d{4})\s+.+$", s)
+    if m:
+        return f"{m.group(1)}-03"
+
     # "Mar-23" / "Mar-2023"
     m = re.match(r"^([A-Za-z]{3})-(\d{2,4})$", s)
     if m:
         mon = MONTH_MAP.get(m.group(1).lower())
-        yr = m.group(2)
-        yr = f"20{yr}" if len(yr) == 2 else yr
+        yr  = m.group(2)
+        yr  = f"20{yr}" if len(yr) == 2 else yr
         if mon:
             return f"{yr}-{mon}"
 
@@ -43,13 +57,12 @@ def normalize_year(raw) -> str:
         yr = f"20{yr}" if len(yr) == 2 else yr
         return f"{yr}-03"
 
-    # Plain "2023"
+    # Plain "2023" → "2023-03"
     if re.match(r"^\d{4}$", s):
         return f"{s}-03"
 
     logger.warning("normalize_year failed: %s", raw)
-    return "PARSE_ERROR"
-
+    return None
 
 def normalize_ticker(raw) -> str:
     """Strip and uppercase ticker. Returns empty string if invalid."""
