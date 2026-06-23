@@ -1,0 +1,648 @@
+rule_id,table,company_id,year,field,issue,severity
+DQ-07,profitandloss,ABB,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIENSOL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIENT,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIGREEN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIPORTS,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIPORTS,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ADANIPOWER,,year,bad_year,CRITICAL
+DQ-07,profitandloss,AMBUJACEM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,APOLLOHOSP,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ASIANPAINT,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ATGL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BAJAJ-AUTO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,AXISBANK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BAJAJFINSV,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BAJAJHLDNG,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BAJFINANCE,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BANKBARODA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BHARTIARTL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BEL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BHEL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BOSCHLTD,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BPCL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,BRITANNIA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,CANBK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,CHOLAFIN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,CIPLA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,COALINDIA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,DABUR,,year,bad_year,CRITICAL
+DQ-07,profitandloss,DIVISLAB,,year,bad_year,CRITICAL
+DQ-07,profitandloss,DLF,,year,bad_year,CRITICAL
+DQ-07,profitandloss,DMART,,year,bad_year,CRITICAL
+DQ-07,profitandloss,DRREDDY,,year,bad_year,CRITICAL
+DQ-07,profitandloss,EICHERMOT,,year,bad_year,CRITICAL
+DQ-07,profitandloss,GAIL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,GODREJCP,,year,bad_year,CRITICAL
+DQ-07,profitandloss,GRASIM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HAL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HAVELLS,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HCLTECH,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HDFCBANK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HDFCLIFE,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HEROMOTOCO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HINDALCO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,HINDUNILVR,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ICICIBANK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ICICIGI,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ICICIPRULI,,year,bad_year,CRITICAL
+DQ-07,profitandloss,INDUSINDBK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,INFY,,year,bad_year,CRITICAL
+DQ-07,profitandloss,IOC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,IRCTC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,IRFC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ITC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,JINDALSTEL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,JIOFIN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,JSWENERGY,,year,bad_year,CRITICAL
+DQ-07,profitandloss,JSWSTEEL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,KOTAKBANK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,LICI,,year,bad_year,CRITICAL
+DQ-07,profitandloss,LODHA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,LT,,year,bad_year,CRITICAL
+DQ-07,profitandloss,LTIM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,M&M,,year,bad_year,CRITICAL
+DQ-07,profitandloss,MARUTI,,year,bad_year,CRITICAL
+DQ-07,profitandloss,MOTHERSON,,year,bad_year,CRITICAL
+DQ-07,profitandloss,NAUKRI,,year,bad_year,CRITICAL
+DQ-07,profitandloss,NESTLEIND,,year,bad_year,CRITICAL
+DQ-07,profitandloss,NHPC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,NTPC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ONGC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,PFC,,year,bad_year,CRITICAL
+DQ-07,profitandloss,PIDILITIND,,year,bad_year,CRITICAL
+DQ-07,profitandloss,PNB,,year,bad_year,CRITICAL
+DQ-07,profitandloss,POWERGRID,,year,bad_year,CRITICAL
+DQ-07,profitandloss,RECLTD,,year,bad_year,CRITICAL
+DQ-07,profitandloss,RELIANCE,,year,bad_year,CRITICAL
+DQ-07,profitandloss,SBILIFE,,year,bad_year,CRITICAL
+DQ-07,profitandloss,SBIN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,SHREECEM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,SHRIRAMFIN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,SUNPHARMA,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TATACONSUM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TATAMOTORS,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TATAPOWER,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TATASTEEL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TCS,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TECHM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TITAN,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TORNTPHARM,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TRENT,,year,bad_year,CRITICAL
+DQ-07,profitandloss,TVSMOTOR,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ULTRACEMCO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,UNIONBANK,,year,bad_year,CRITICAL
+DQ-07,profitandloss,UNITDSPR,,year,bad_year,CRITICAL
+DQ-07,profitandloss,VBL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,VEDL,,year,bad_year,CRITICAL
+DQ-07,profitandloss,WIPRO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ZOMATO,,year,bad_year,CRITICAL
+DQ-07,profitandloss,ZYDUSLIFE,,year,bad_year,CRITICAL
+DQ-07,profitandloss,INDIGO,,year,bad_year,CRITICAL
+DQ-09,profitandloss,AXISBANK,2013-03,operating_profit,sales-expenses=9667 != operating_profit=8313.0 (diff=1354.0),WARNING
+DQ-09,profitandloss,AXISBANK,2014-03,operating_profit,sales-expenses=11951 != operating_profit=9644.0 (diff=2307.0),WARNING
+DQ-09,profitandloss,AXISBANK,2015-03,operating_profit,sales-expenses=14225 != operating_profit=11127.0 (diff=3098.0),WARNING
+DQ-09,profitandloss,AXISBANK,2016-03,operating_profit,sales-expenses=16833 != operating_profit=13367.0 (diff=3466.0),WARNING
+DQ-09,profitandloss,AXISBANK,2017-03,operating_profit,sales-expenses=18093 != operating_profit=23808.0 (diff=5715.0),WARNING
+DQ-09,profitandloss,AXISBANK,2018-03,operating_profit,sales-expenses=18617 != operating_profit=28895.0 (diff=10278.0),WARNING
+DQ-09,profitandloss,AXISBANK,2019-03,operating_profit,sales-expenses=21708 != operating_profit=27155.0 (diff=5447.0),WARNING
+DQ-09,profitandloss,AXISBANK,2020-03,operating_profit,sales-expenses=25206 != operating_profit=35066.0 (diff=9860.0),WARNING
+DQ-09,profitandloss,AXISBANK,2021-03,operating_profit,sales-expenses=29239 != operating_profit=31749.0 (diff=2510.0),WARNING
+DQ-09,profitandloss,AXISBANK,2022-03,operating_profit,sales-expenses=33132 != operating_profit=29962.0 (diff=3170.0),WARNING
+DQ-09,profitandloss,AXISBANK,2023-03,operating_profit,sales-expenses=42946 != operating_profit=29089.0 (diff=13857.0),WARNING
+DQ-09,profitandloss,AXISBANK,2024-03,operating_profit,sales-expenses=49895 != operating_profit=37943.0 (diff=11952.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2015-03,operating_profit,sales-expenses=3118 != operating_profit=1752.0 (diff=1366.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2016-03,operating_profit,sales-expenses=4340 != operating_profit=2354.0 (diff=1986.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2017-03,operating_profit,sales-expenses=6117 != operating_profit=3250.0 (diff=2867.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2018-03,operating_profit,sales-expenses=8050 != operating_profit=4115.0 (diff=3935.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2019-03,operating_profit,sales-expenses=11764 != operating_profit=5454.0 (diff=6310.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2020-03,operating_profit,sales-expenses=16766 != operating_profit=9159.0 (diff=7607.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2021-03,operating_profit,sales-expenses=17154 != operating_profit=10839.0 (diff=6315.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2022-03,operating_profit,sales-expenses=21786 != operating_profit=11880.0 (diff=9906.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2023-03,operating_profit,sales-expenses=28710 != operating_profit=12693.0 (diff=16017.0),WARNING
+DQ-09,profitandloss,BAJFINANCE,2024-03,operating_profit,sales-expenses=36086 != operating_profit=16099.0 (diff=19987.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2013-03,operating_profit,sales-expenses=11956 != operating_profit=10950.0 (diff=1006.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2014-03,operating_profit,sales-expenses=12859 != operating_profit=12049.0 (diff=810.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2015-03,operating_profit,sales-expenses=14368 != operating_profit=13466.0 (diff=902.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2016-03,operating_profit,sales-expenses=13692 != operating_profit=25391.0 (diff=11699.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2017-03,operating_profit,sales-expenses=14877 != operating_profit=19250.0 (diff=4373.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2018-03,operating_profit,sales-expenses=16896 != operating_profit=26093.0 (diff=9197.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2019-03,operating_profit,sales-expenses=20400 != operating_profit=25815.0 (diff=5415.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2020-03,operating_profit,sales-expenses=28855 != operating_profit=40583.0 (diff=11728.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2021-03,operating_profit,sales-expenses=31113 != operating_profit=38070.0 (diff=6957.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2022-03,operating_profit,sales-expenses=34570 != operating_profit=37518.0 (diff=2948.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2023-03,operating_profit,sales-expenses=44561 != operating_profit=38231.0 (diff=6330.0),WARNING
+DQ-09,profitandloss,BANKBARODA,2024-03,operating_profit,sales-expenses=48480 != operating_profit=44379.0 (diff=4101.0),WARNING
+DQ-09,profitandloss,CANBK,2013-03,operating_profit,sales-expenses=7872 != operating_profit=7217.0 (diff=655.0),WARNING
+DQ-09,profitandloss,CANBK,2014-03,operating_profit,sales-expenses=8964 != operating_profit=9636.0 (diff=672.0),WARNING
+DQ-09,profitandloss,CANBK,2015-03,operating_profit,sales-expenses=9680 != operating_profit=10302.0 (diff=622.0),WARNING
+DQ-09,profitandloss,CANBK,2016-03,operating_profit,sales-expenses=9776 != operating_profit=17785.0 (diff=8009.0),WARNING
+DQ-09,profitandloss,CANBK,2017-03,operating_profit,sales-expenses=9917 != operating_profit=15691.0 (diff=5774.0),WARNING
+DQ-09,profitandloss,CANBK,2018-03,operating_profit,sales-expenses=12232 != operating_profit=25582.0 (diff=13350.0),WARNING
+DQ-09,profitandloss,CANBK,2019-03,operating_profit,sales-expenses=15612 != operating_profit=27202.0 (diff=11590.0),WARNING
+DQ-09,profitandloss,CANBK,2020-03,operating_profit,sales-expenses=13942 != operating_profit=26809.0 (diff=12867.0),WARNING
+DQ-09,profitandloss,CANBK,2021-03,operating_profit,sales-expenses=25071 != operating_profit=43437.0 (diff=18366.0),WARNING
+DQ-09,profitandloss,CANBK,2022-03,operating_profit,sales-expenses=27579 != operating_profit=41235.0 (diff=13656.0),WARNING
+DQ-09,profitandloss,CANBK,2023-03,operating_profit,sales-expenses=32895 != operating_profit=42772.0 (diff=9877.0),WARNING
+DQ-09,profitandloss,CANBK,2024-03,operating_profit,sales-expenses=38401 != operating_profit=46146.0 (diff=7745.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2013-03,operating_profit,sales-expenses=1160 != operating_profit=688.0 (diff=472.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2014-03,operating_profit,sales-expenses=1510 != operating_profit=932.0 (diff=578.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2015-03,operating_profit,sales-expenses=1757 != operating_profit=1061.0 (diff=696.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2016-03,operating_profit,sales-expenses=2166 != operating_profit=1266.0 (diff=900.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2017-03,operating_profit,sales-expenses=2466 != operating_profit=1322.0 (diff=1144.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2018-03,operating_profit,sales-expenses=2902 != operating_profit=1451.0 (diff=1451.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2019-03,operating_profit,sales-expenses=3520 != operating_profit=1632.0 (diff=1888.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2020-03,operating_profit,sales-expenses=4120 != operating_profit=2421.0 (diff=1699.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2021-03,operating_profit,sales-expenses=5007 != operating_profit=2913.0 (diff=2094.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2022-03,operating_profit,sales-expenses=5850 != operating_profit=2926.0 (diff=2924.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2023-03,operating_profit,sales-expenses=7136 != operating_profit=3621.0 (diff=3515.0),WARNING
+DQ-09,profitandloss,CHOLAFIN,2024-03,operating_profit,sales-expenses=9932 != operating_profit=5385.0 (diff=4547.0),WARNING
+DQ-09,profitandloss,CIPLA,2013-03,operating_profit,sales-expenses=8245 != operating_profit=6065.0 (diff=2180.0),WARNING
+DQ-09,profitandloss,CIPLA,2014-03,operating_profit,sales-expenses=10027 != operating_profit=8026.0 (diff=2001.0),WARNING
+DQ-09,profitandloss,CIPLA,2015-03,operating_profit,sales-expenses=11177 != operating_profit=9183.0 (diff=1994.0),WARNING
+DQ-09,profitandloss,CIPLA,2016-03,operating_profit,sales-expenses=13583 != operating_profit=11310.0 (diff=2273.0),WARNING
+DQ-09,profitandloss,CIPLA,2017-03,operating_profit,sales-expenses=14235 != operating_profit=11898.0 (diff=2337.0),WARNING
+DQ-09,profitandloss,CIPLA,2018-03,operating_profit,sales-expenses=15042 != operating_profit=12329.0 (diff=2713.0),WARNING
+DQ-09,profitandloss,CIPLA,2019-03,operating_profit,sales-expenses=16194 != operating_profit=13265.0 (diff=2929.0),WARNING
+DQ-09,profitandloss,CIPLA,2020-03,operating_profit,sales-expenses=16935 != operating_profit=13926.0 (diff=3009.0),WARNING
+DQ-09,profitandloss,CIPLA,2021-03,operating_profit,sales-expenses=18999 != operating_profit=14907.0 (diff=4092.0),WARNING
+DQ-09,profitandloss,CIPLA,2022-03,operating_profit,sales-expenses=21657 != operating_profit=17211.0 (diff=4446.0),WARNING
+DQ-09,profitandloss,CIPLA,2023-03,operating_profit,sales-expenses=22643 != operating_profit=17726.0 (diff=4917.0),WARNING
+DQ-09,profitandloss,CIPLA,2024-03,operating_profit,sales-expenses=25684 != operating_profit=19483.0 (diff=6201.0),WARNING
+DQ-09,profitandloss,COALINDIA,2013-03,operating_profit,sales-expenses=68257 != operating_profit=50216.0 (diff=18041.0),WARNING
+DQ-09,profitandloss,COALINDIA,2014-03,operating_profit,sales-expenses=70549 != operating_profit=52842.0 (diff=17707.0),WARNING
+DQ-09,profitandloss,COALINDIA,2015-03,operating_profit,sales-expenses=74111 != operating_profit=56777.0 (diff=17334.0),WARNING
+DQ-09,profitandloss,COALINDIA,2016-03,operating_profit,sales-expenses=77473 != operating_profit=59147.0 (diff=18326.0),WARNING
+DQ-09,profitandloss,COALINDIA,2017-03,operating_profit,sales-expenses=77754 != operating_profit=65716.0 (diff=12038.0),WARNING
+DQ-09,profitandloss,COALINDIA,2018-03,operating_profit,sales-expenses=84814 != operating_profit=75956.0 (diff=8858.0),WARNING
+DQ-09,profitandloss,COALINDIA,2019-03,operating_profit,sales-expenses=99322 != operating_profit=74579.0 (diff=24743.0),WARNING
+DQ-09,profitandloss,COALINDIA,2020-03,operating_profit,sales-expenses=95577 != operating_profit=74500.0 (diff=21077.0),WARNING
+DQ-09,profitandloss,COALINDIA,2021-03,operating_profit,sales-expenses=89384 != operating_profit=71398.0 (diff=17986.0),WARNING
+DQ-09,profitandloss,COALINDIA,2022-03,operating_profit,sales-expenses=109174 != operating_profit=84995.0 (diff=24179.0),WARNING
+DQ-09,profitandloss,COALINDIA,2023-03,operating_profit,sales-expenses=137568 != operating_profit=94020.0 (diff=43548.0),WARNING
+DQ-09,profitandloss,COALINDIA,2024-03,operating_profit,sales-expenses=141505 != operating_profit=94352.0 (diff=47153.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2013-03,operating_profit,sales-expenses=16166 != operating_profit=12631.0 (diff=3535.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2014-03,operating_profit,sales-expenses=19110 != operating_profit=13508.0 (diff=5602.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2015-03,operating_profit,sales-expenses=23378 != operating_profit=16164.0 (diff=7214.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2016-03,operating_profit,sales-expenses=29092 != operating_profit=20055.0 (diff=9037.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2017-03,operating_profit,sales-expenses=35229 != operating_profit=23856.0 (diff=11373.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2018-03,operating_profit,sales-expenses=42907 != operating_profit=29532.0 (diff=13375.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2019-03,operating_profit,sales-expenses=51448 != operating_profit=34856.0 (diff=16592.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2020-03,operating_profit,sales-expenses=60052 != operating_profit=45459.0 (diff=14593.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2021-03,operating_profit,sales-expenses=69304 != operating_profit=52457.0 (diff=16847.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2022-03,operating_profit,sales-expenses=77352 != operating_profit=56557.0 (diff=20795.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2023-03,operating_profit,sales-expenses=92974 != operating_profit=63042.0 (diff=29932.0),WARNING
+DQ-09,profitandloss,HDFCBANK,2024-03,operating_profit,sales-expenses=129510 != operating_profit=174196.0 (diff=44686.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2013-03,operating_profit,sales-expenses=14045 != operating_profit=13535.0 (diff=510.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2014-03,operating_profit,sales-expenses=17155 != operating_profit=16561.0 (diff=594.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2015-03,operating_profit,sales-expenses=27229 != operating_profit=26341.0 (diff=888.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2016-03,operating_profit,sales-expenses=18133 != operating_profit=17187.0 (diff=946.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2017-03,operating_profit,sales-expenses=30638 != operating_profit=29674.0 (diff=964.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2018-03,operating_profit,sales-expenses=32249 != operating_profit=31186.0 (diff=1063.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2019-03,operating_profit,sales-expenses=38841 != operating_profit=37640.0 (diff=1201.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2020-03,operating_profit,sales-expenses=29380 != operating_profit=28239.0 (diff=1141.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2021-03,operating_profit,sales-expenses=71528 != operating_profit=70294.0 (diff=1234.0),WARNING
+DQ-09,profitandloss,HDFCLIFE,2022-03,operating_profit,sales-expenses=67126 != operating_profit=66348.0 (diff=778.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2014-03,operating_profit,sales-expenses=25263 != operating_profit=21722.0 (diff=3541.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2015-03,operating_profit,sales-expenses=27526 != operating_profit=24018.0 (diff=3508.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2016-03,operating_profit,sales-expenses=28442 != operating_profit=24033.0 (diff=4409.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2017-03,operating_profit,sales-expenses=28583 != operating_profit=24025.0 (diff=4558.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2018-03,operating_profit,sales-expenses=32427 != operating_profit=27124.0 (diff=5303.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2019-03,operating_profit,sales-expenses=33934 != operating_profit=28946.0 (diff=4988.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2020-03,operating_profit,sales-expenses=29207 != operating_profit=25184.0 (diff=4023.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2021-03,operating_profit,sales-expenses=30913 != operating_profit=26902.0 (diff=4011.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2022-03,operating_profit,sales-expenses=29498 != operating_profit=26295.0 (diff=3203.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2023-03,operating_profit,sales-expenses=34053 != operating_profit=30060.0 (diff=3993.0),WARNING
+DQ-09,profitandloss,HEROMOTOCO,2024-03,operating_profit,sales-expenses=37713 != operating_profit=32554.0 (diff=5159.0),WARNING
+DQ-09,profitandloss,HINDALCO,2013-03,operating_profit,sales-expenses=78114 != operating_profit=72494.0 (diff=5620.0),WARNING
+DQ-09,profitandloss,HINDALCO,2014-03,operating_profit,sales-expenses=84993 != operating_profit=79671.0 (diff=5322.0),WARNING
+DQ-09,profitandloss,HINDALCO,2015-03,operating_profit,sales-expenses=100103 != operating_profit=95437.0 (diff=4666.0),WARNING
+DQ-09,profitandloss,HINDALCO,2016-03,operating_profit,sales-expenses=93625 != operating_profit=90981.0 (diff=2644.0),WARNING
+DQ-09,profitandloss,HINDALCO,2017-03,operating_profit,sales-expenses=94442 != operating_profit=87867.0 (diff=6575.0),WARNING
+DQ-09,profitandloss,HINDALCO,2018-03,operating_profit,sales-expenses=111272 != operating_profit=101488.0 (diff=9784.0),WARNING
+DQ-09,profitandloss,HINDALCO,2019-03,operating_profit,sales-expenses=126764 != operating_profit=115031.0 (diff=11733.0),WARNING
+DQ-09,profitandloss,HINDALCO,2020-03,operating_profit,sales-expenses=113947 != operating_profit=103838.0 (diff=10109.0),WARNING
+DQ-09,profitandloss,HINDALCO,2021-03,operating_profit,sales-expenses=128270 != operating_profit=114449.0 (diff=13821.0),WARNING
+DQ-09,profitandloss,HINDALCO,2022-03,operating_profit,sales-expenses=191291 != operating_profit=166712.0 (diff=24579.0),WARNING
+DQ-09,profitandloss,HINDALCO,2023-03,operating_profit,sales-expenses=219556 != operating_profit=200536.0 (diff=19020.0),WARNING
+DQ-09,profitandloss,HINDALCO,2024-03,operating_profit,sales-expenses=212104 != operating_profit=192090.0 (diff=20014.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2013-03,operating_profit,sales-expenses=26978 != operating_profit=22784.0 (diff=4194.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2014-03,operating_profit,sales-expenses=29193 != operating_profit=24475.0 (diff=4718.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2015-03,operating_profit,sales-expenses=31954 != operating_profit=26560.0 (diff=5394.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2016-03,operating_profit,sales-expenses=32169 != operating_profit=26276.0 (diff=5893.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2017-03,operating_profit,sales-expenses=33127 != operating_profit=26834.0 (diff=6293.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2018-03,operating_profit,sales-expenses=35519 != operating_profit=28046.0 (diff=7473.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2019-03,operating_profit,sales-expenses=39277 != operating_profit=30430.0 (diff=8847.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2020-03,operating_profit,sales-expenses=39665 != operating_profit=29922.0 (diff=9743.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2021-03,operating_profit,sales-expenses=46911 != operating_profit=35402.0 (diff=11509.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2022-03,operating_profit,sales-expenses=52340 != operating_profit=39589.0 (diff=12751.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2023-03,operating_profit,sales-expenses=60466 != operating_profit=46433.0 (diff=14033.0),WARNING
+DQ-09,profitandloss,HINDUNILVR,2024-03,operating_profit,sales-expenses=61562 != operating_profit=47237.0 (diff=14325.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2013-03,operating_profit,sales-expenses=16600 != operating_profit=31684.0 (diff=15084.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2014-03,operating_profit,sales-expenses=19768 != operating_profit=32852.0 (diff=13084.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2015-03,operating_profit,sales-expenses=22646 != operating_profit=38766.0 (diff=16120.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2016-03,operating_profit,sales-expenses=25298 != operating_profit=52252.0 (diff=26954.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2017-03,operating_profit,sales-expenses=26104 != operating_profit=63841.0 (diff=37737.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2018-03,operating_profit,sales-expenses=27900 != operating_profit=72806.0 (diff=44906.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2019-03,operating_profit,sales-expenses=32804 != operating_profit=83775.0 (diff=50971.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2020-03,operating_profit,sales-expenses=40170 != operating_profit=85361.0 (diff=45191.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2021-03,operating_profit,sales-expenses=46504 != operating_profit=91309.0 (diff=44805.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2022-03,operating_profit,sales-expenses=54240 != operating_profit=80798.0 (diff=26558.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2023-03,operating_profit,sales-expenses=70524 != operating_profit=87864.0 (diff=17340.0),WARNING
+DQ-09,profitandloss,ICICIBANK,2024-03,operating_profit,sales-expenses=85408 != operating_profit=99560.0 (diff=14152.0),WARNING
+DQ-09,profitandloss,ICICIGI,2013-03,operating_profit,sales-expenses=4004 != operating_profit=4191.0 (diff=187.0),WARNING
+DQ-09,profitandloss,ICICIGI,2014-03,operating_profit,sales-expenses=4343 != operating_profit=4578.0 (diff=235.0),WARNING
+DQ-09,profitandloss,ICICIGI,2015-03,operating_profit,sales-expenses=4222 != operating_profit=4456.0 (diff=234.0),WARNING
+DQ-09,profitandloss,ICICIGI,2016-03,operating_profit,sales-expenses=6033 != operating_profit=5269.0 (diff=764.0),WARNING
+DQ-09,profitandloss,ICICIGI,2017-03,operating_profit,sales-expenses=7520 != operating_profit=6601.0 (diff=919.0),WARNING
+DQ-09,profitandloss,ICICIGI,2018-03,operating_profit,sales-expenses=6853 != operating_profit=7174.0 (diff=321.0),WARNING
+DQ-09,profitandloss,ICICIGI,2019-03,operating_profit,sales-expenses=11093 != operating_profit=9494.0 (diff=1599.0),WARNING
+DQ-09,profitandloss,ICICIGI,2020-03,operating_profit,sales-expenses=11517 != operating_profit=9745.0 (diff=1772.0),WARNING
+DQ-09,profitandloss,ICICIGI,2021-03,operating_profit,sales-expenses=12161 != operating_profit=10090.0 (diff=2071.0),WARNING
+DQ-09,profitandloss,ICICIGI,2022-03,operating_profit,sales-expenses=16026 != operating_profit=15010.0 (diff=1016.0),WARNING
+DQ-09,profitandloss,ICICIGI,2023-03,operating_profit,sales-expenses=17876 != operating_profit=16612.0 (diff=1264.0),WARNING
+DQ-09,profitandloss,ICICIGI,2024-03,operating_profit,sales-expenses=20487 != operating_profit=17910.0 (diff=2577.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2013-03,operating_profit,sales-expenses=20011 != operating_profit=19280.0 (diff=731.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2014-03,operating_profit,sales-expenses=21873 != operating_profit=20384.0 (diff=1489.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2015-03,operating_profit,sales-expenses=34436 != operating_profit=32798.0 (diff=1638.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2016-03,operating_profit,sales-expenses=20849 != operating_profit=19008.0 (diff=1841.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2017-03,operating_profit,sales-expenses=37801 != operating_profit=36010.0 (diff=1791.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2018-03,operating_profit,sales-expenses=38812 != operating_profit=37062.0 (diff=1750.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2019-03,operating_profit,sales-expenses=41440 != operating_profit=40922.0 (diff=518.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2020-03,operating_profit,sales-expenses=21025 != operating_profit=21344.0 (diff=319.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2022-03,operating_profit,sales-expenses=63564 != operating_profit=65728.0 (diff=2164.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2023-03,operating_profit,sales-expenses=50478 != operating_profit=52235.0 (diff=1757.0),WARNING
+DQ-09,profitandloss,ICICIPRULI,2024-03,operating_profit,sales-expenses=90307 != operating_profit=92136.0 (diff=1829.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2013-03,operating_profit,sales-expenses=2233 != operating_profit=1947.0 (diff=286.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2014-03,operating_profit,sales-expenses=2891 != operating_profit=2555.0 (diff=336.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2015-03,operating_profit,sales-expenses=3420 != operating_profit=3133.0 (diff=287.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2016-03,operating_profit,sales-expenses=4517 != operating_profit=4188.0 (diff=329.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2017-03,operating_profit,sales-expenses=6063 != operating_profit=5684.0 (diff=379.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2018-03,operating_profit,sales-expenses=7498 != operating_profit=6555.0 (diff=943.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2019-03,operating_profit,sales-expenses=8846 != operating_profit=9283.0 (diff=437.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2020-03,operating_profit,sales-expenses=12059 != operating_profit=12611.0 (diff=552.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2021-03,operating_profit,sales-expenses=13528 != operating_profit=15997.0 (diff=2469.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2022-03,operating_profit,sales-expenses=15000 != operating_profit=15840.0 (diff=840.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2023-03,operating_profit,sales-expenses=17592 != operating_profit=15525.0 (diff=2067.0),WARNING
+DQ-09,profitandloss,INDUSINDBK,2024-03,operating_profit,sales-expenses=20616 != operating_profit=17638.0 (diff=2978.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2013-03,operating_profit,sales-expenses=4814 != operating_profit=6603.0 (diff=1789.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2014-03,operating_profit,sales-expenses=5674 != operating_profit=7053.0 (diff=1379.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2015-03,operating_profit,sales-expenses=6353 != operating_profit=9718.0 (diff=3365.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2016-03,operating_profit,sales-expenses=9279 != operating_profit=11541.0 (diff=2262.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2017-03,operating_profit,sales-expenses=10866 != operating_profit=14832.0 (diff=3966.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2018-03,operating_profit,sales-expenses=12664 != operating_profit=16805.0 (diff=4141.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2019-03,operating_profit,sales-expenses=14644 != operating_profit=19758.0 (diff=5114.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2020-03,operating_profit,sales-expenses=17573 != operating_profit=22578.0 (diff=5005.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2021-03,operating_profit,sales-expenses=19853 != operating_profit=29812.0 (diff=9959.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2022-03,operating_profit,sales-expenses=22187 != operating_profit=30699.0 (diff=8512.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2023-03,operating_profit,sales-expenses=27740 != operating_profit=33485.0 (diff=5745.0),WARNING
+DQ-09,profitandloss,KOTAKBANK,2024-03,operating_profit,sales-expenses=33670 != operating_profit=47052.0 (diff=13382.0),WARNING
+DQ-09,profitandloss,PFC,2013-03,operating_profit,sales-expenses=16983 != operating_profit=5987.0 (diff=10996.0),WARNING
+DQ-09,profitandloss,PFC,2014-03,operating_profit,sales-expenses=20659 != operating_profit=7607.0 (diff=13052.0),WARNING
+DQ-09,profitandloss,PFC,2015-03,operating_profit,sales-expenses=23885 != operating_profit=8429.0 (diff=15456.0),WARNING
+DQ-09,profitandloss,PFC,2016-03,operating_profit,sales-expenses=25819 != operating_profit=9162.0 (diff=16657.0),WARNING
+DQ-09,profitandloss,PFC,2017-03,operating_profit,sales-expenses=22043 != operating_profit=5275.0 (diff=16768.0),WARNING
+DQ-09,profitandloss,PFC,2018-03,operating_profit,sales-expenses=42041 != operating_profit=11752.0 (diff=30289.0),WARNING
+DQ-09,profitandloss,PFC,2019-03,operating_profit,sales-expenses=52410 != operating_profit=17783.0 (diff=34627.0),WARNING
+DQ-09,profitandloss,PFC,2020-03,operating_profit,sales-expenses=54857 != operating_profit=14012.0 (diff=40845.0),WARNING
+DQ-09,profitandloss,PFC,2021-03,operating_profit,sales-expenses=64554 != operating_profit=19871.0 (diff=44683.0),WARNING
+DQ-09,profitandloss,PFC,2022-03,operating_profit,sales-expenses=68047 != operating_profit=23338.0 (diff=44709.0),WARNING
+DQ-09,profitandloss,PFC,2023-03,operating_profit,sales-expenses=73517 != operating_profit=26501.0 (diff=47016.0),WARNING
+DQ-09,profitandloss,PFC,2024-03,operating_profit,sales-expenses=91535 != operating_profit=33573.0 (diff=57962.0),WARNING
+DQ-09,profitandloss,PNB,2013-03,operating_profit,sales-expenses=30615 != operating_profit=nan (diff=30615.0),WARNING
+DQ-09,profitandloss,PNB,2014-03,operating_profit,sales-expenses=28846 != operating_profit=nan (diff=28846.0),WARNING
+DQ-09,profitandloss,PNB,2015-03,operating_profit,sales-expenses=29950 != operating_profit=nan (diff=29950.0),WARNING
+DQ-09,profitandloss,PNB,2016-03,operating_profit,sales-expenses=23351 != operating_profit=nan (diff=23351.0),WARNING
+DQ-09,profitandloss,PNB,2017-03,operating_profit,sales-expenses=25525 != operating_profit=nan (diff=25525.0),WARNING
+DQ-09,profitandloss,PNB,2018-03,operating_profit,sales-expenses=5380 != operating_profit=nan (diff=5380.0),WARNING
+DQ-09,profitandloss,PNB,2019-03,operating_profit,sales-expenses=12502 != operating_profit=nan (diff=12502.0),WARNING
+DQ-09,profitandloss,PNB,2020-03,operating_profit,sales-expenses=29051 != operating_profit=nan (diff=29051.0),WARNING
+DQ-09,profitandloss,PNB,2021-03,operating_profit,sales-expenses=43334 != operating_profit=nan (diff=43334.0),WARNING
+DQ-09,profitandloss,PNB,2022-03,operating_profit,sales-expenses=40216 != operating_profit=nan (diff=40216.0),WARNING
+DQ-09,profitandloss,PNB,2023-03,operating_profit,sales-expenses=45343 != operating_profit=nan (diff=45343.0),WARNING
+DQ-09,profitandloss,PNB,2024-03,operating_profit,sales-expenses=69442 != operating_profit=nan (diff=69442.0),WARNING
+DQ-09,profitandloss,SBIN,2013-03,operating_profit,sales-expenses=101693 != operating_profit=-5124.0 (diff=106817.0),WARNING
+DQ-09,profitandloss,SBIN,2014-03,operating_profit,sales-expenses=106864 != operating_profit=-14614.0 (diff=121478.0),WARNING
+DQ-09,profitandloss,SBIN,2015-03,operating_profit,sales-expenses=111299 != operating_profit=-21879.0 (diff=133178.0),WARNING
+DQ-09,profitandloss,SBIN,2016-03,operating_profit,sales-expenses=110648 != operating_profit=-32399.0 (diff=143047.0),WARNING
+DQ-09,profitandloss,SBIN,2017-03,operating_profit,sales-expenses=84781 != operating_profit=-64334.0 (diff=149115.0),WARNING
+DQ-09,profitandloss,SBIN,2018-03,operating_profit,sales-expenses=59905 != operating_profit=-86697.0 (diff=146602.0),WARNING
+DQ-09,profitandloss,SBIN,2019-03,operating_profit,sales-expenses=87218 != operating_profit=-68649.0 (diff=155867.0),WARNING
+DQ-09,profitandloss,SBIN,2020-03,operating_profit,sales-expenses=96943 != operating_profit=-64181.0 (diff=161124.0),WARNING
+DQ-09,profitandloss,SBIN,2021-03,operating_profit,sales-expenses=85294 != operating_profit=-70715.0 (diff=156009.0),WARNING
+DQ-09,profitandloss,SBIN,2022-03,operating_profit,sales-expenses=92624 != operating_profit=-63570.0 (diff=156194.0),WARNING
+DQ-09,profitandloss,SBIN,2023-03,operating_profit,sales-expenses=146542 != operating_profit=-43439.0 (diff=189981.0),WARNING
+DQ-09,profitandloss,SBIN,2024-03,operating_profit,sales-expenses=199439 != operating_profit=-60297.0 (diff=259736.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2013-03,operating_profit,sales-expenses=5271 != operating_profit=2179.0 (diff=3092.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2014-03,operating_profit,sales-expenses=6232 != operating_profit=1999.0 (diff=4233.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2015-03,operating_profit,sales-expenses=6396 != operating_profit=1691.0 (diff=4705.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2016-03,operating_profit,sales-expenses=6912 != operating_profit=1824.0 (diff=5088.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2017-03,operating_profit,sales-expenses=7191 != operating_profit=1972.0 (diff=5219.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2018-03,operating_profit,sales-expenses=10214 != operating_profit=3805.0 (diff=6409.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2019-03,operating_profit,sales-expenses=11365 != operating_profit=3801.0 (diff=7564.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2020-03,operating_profit,sales-expenses=11878 != operating_profit=3565.0 (diff=8313.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2021-03,operating_profit,sales-expenses=12490 != operating_profit=3402.0 (diff=9088.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2022-03,operating_profit,sales-expenses=13439 != operating_profit=3666.0 (diff=9773.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2023-03,operating_profit,sales-expenses=21786 != operating_profit=8799.0 (diff=12987.0),WARNING
+DQ-09,profitandloss,SHRIRAMFIN,2024-03,operating_profit,sales-expenses=26110 != operating_profit=10523.0 (diff=15587.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2013-03,operating_profit,sales-expenses=17901 != operating_profit=325.0 (diff=17576.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2014-03,operating_profit,sales-expenses=20565 != operating_profit=-902.0 (diff=21467.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2015-03,operating_profit,sales-expenses=22666 != operating_profit=-973.0 (diff=23639.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2016-03,operating_profit,sales-expenses=21967 != operating_profit=-1928.0 (diff=23895.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2017-03,operating_profit,sales-expenses=18946 != operating_profit=-4830.0 (diff=23776.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2018-03,operating_profit,sales-expenses=11771 != operating_profit=-11700.0 (diff=23471.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2019-03,operating_profit,sales-expenses=15295 != operating_profit=-8601.0 (diff=23896.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2020-03,operating_profit,sales-expenses=16313 != operating_profit=-9523.0 (diff=25836.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2021-03,operating_profit,sales-expenses=33041 != operating_profit=-11071.0 (diff=44112.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2022-03,operating_profit,sales-expenses=35966 != operating_profit=-4213.0 (diff=40179.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2023-03,operating_profit,sales-expenses=45008 != operating_profit=-3024.0 (diff=48032.0),WARNING
+DQ-09,profitandloss,UNIONBANK,2024-03,operating_profit,sales-expenses=67954 != operating_profit=4590.0 (diff=63364.0),WARNING
+DQ-09,profitandloss,INDIGO,2013-03,operating_profit,sales-expenses=9130 != operating_profit=8348.0 (diff=782.0),WARNING
+DQ-09,profitandloss,INDIGO,2014-03,operating_profit,sales-expenses=10994 != operating_profit=10684.0 (diff=310.0),WARNING
+DQ-09,profitandloss,INDIGO,2015-03,operating_profit,sales-expenses=13775 != operating_profit=12022.0 (diff=1753.0),WARNING
+DQ-09,profitandloss,INDIGO,2016-03,operating_profit,sales-expenses=15790 != operating_profit=12976.0 (diff=2814.0),WARNING
+DQ-09,profitandloss,INDIGO,2017-03,operating_profit,sales-expenses=18174 != operating_profit=16362.0 (diff=1812.0),WARNING
+DQ-09,profitandloss,INDIGO,2018-03,operating_profit,sales-expenses=22608 != operating_profit=19991.0 (diff=2617.0),WARNING
+DQ-09,profitandloss,INDIGO,2019-03,operating_profit,sales-expenses=27934 != operating_profit=28648.0 (diff=714.0),WARNING
+DQ-09,profitandloss,INDIGO,2020-03,operating_profit,sales-expenses=33854 != operating_profit=31687.0 (diff=2167.0),WARNING
+DQ-09,profitandloss,INDIGO,2021-03,operating_profit,sales-expenses=12471 != operating_profit=14638.0 (diff=2167.0),WARNING
+DQ-09,profitandloss,INDIGO,2022-03,operating_profit,sales-expenses=23545 != operating_profit=25373.0 (diff=1828.0),WARNING
+DQ-09,profitandloss,INDIGO,2023-03,operating_profit,sales-expenses=51278 != operating_profit=47926.0 (diff=3352.0),WARNING
+DQ-09,profitandloss,INDIGO,2024-03,operating_profit,sales-expenses=64099 != operating_profit=52573.0 (diff=11526.0),WARNING
+DQ-10,profitandloss,ADANIENSOL,2024-03,opm_percentage,Stored OPM=30.0 vs computed=34.39 (diff=4.39pp),WARNING
+DQ-10,profitandloss,AXISBANK,2013-03,opm_percentage,Stored OPM=1353.0 vs computed=30.58 (diff=1322.42pp),WARNING
+DQ-10,profitandloss,AXISBANK,2014-03,opm_percentage,Stored OPM=2307.0 vs computed=31.47 (diff=2275.53pp),WARNING
+DQ-10,profitandloss,AXISBANK,2015-03,opm_percentage,Stored OPM=3097.0 vs computed=31.36 (diff=3065.64pp),WARNING
+DQ-10,profitandloss,AXISBANK,2016-03,opm_percentage,Stored OPM=3466.0 vs computed=32.61 (diff=3433.39pp),WARNING
+DQ-10,profitandloss,AXISBANK,2017-03,opm_percentage,Stored OPM=-5715.0 vs computed=53.45 (diff=5768.45pp),WARNING
+DQ-10,profitandloss,AXISBANK,2018-03,opm_percentage,Stored OPM=-10277.0 vs computed=63.12 (diff=10340.12pp),WARNING
+DQ-10,profitandloss,AXISBANK,2019-03,opm_percentage,Stored OPM=-5447.0 vs computed=49.39 (diff=5496.39pp),WARNING
+DQ-10,profitandloss,AXISBANK,2020-03,opm_percentage,Stored OPM=-9859.0 vs computed=55.98 (diff=9914.98pp),WARNING
+DQ-10,profitandloss,AXISBANK,2021-03,opm_percentage,Stored OPM=-2510.0 vs computed=50.12 (diff=2560.12pp),WARNING
+DQ-10,profitandloss,AXISBANK,2022-03,opm_percentage,Stored OPM=3170.0 vs computed=44.47 (diff=3125.53pp),WARNING
+DQ-10,profitandloss,AXISBANK,2023-03,opm_percentage,Stored OPM=13857.0 vs computed=34.16 (diff=13822.84pp),WARNING
+DQ-10,profitandloss,AXISBANK,2024-03,opm_percentage,Stored OPM=11952.0 vs computed=34.69 (diff=11917.31pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2015-03,opm_percentage,Stored OPM=1367.0 vs computed=32.49 (diff=1334.51pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2016-03,opm_percentage,Stored OPM=1986.0 vs computed=32.25 (diff=1953.75pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2017-03,opm_percentage,Stored OPM=2867.0 vs computed=32.6 (diff=2834.4pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2018-03,opm_percentage,Stored OPM=3935.0 vs computed=32.28 (diff=3902.72pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2019-03,opm_percentage,Stored OPM=6310.0 vs computed=29.5 (diff=6280.5pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2020-03,opm_percentage,Stored OPM=7608.0 vs computed=34.73 (diff=7573.27pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2021-03,opm_percentage,Stored OPM=6314.0 vs computed=40.64 (diff=6273.36pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2022-03,opm_percentage,Stored OPM=9906.0 vs computed=37.55 (diff=9868.45pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2023-03,opm_percentage,Stored OPM=16018.0 vs computed=30.65 (diff=15987.35pp),WARNING
+DQ-10,profitandloss,BAJFINANCE,2024-03,opm_percentage,Stored OPM=19987.0 vs computed=29.29 (diff=19957.71pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2013-03,opm_percentage,Stored OPM=1006.0 vs computed=30.05 (diff=975.95pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2014-03,opm_percentage,Stored OPM=809.0 vs computed=29.78 (diff=779.22pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2015-03,opm_percentage,Stored OPM=902.0 vs computed=29.98 (diff=872.02pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2016-03,opm_percentage,Stored OPM=-11700.0 vs computed=55.44 (diff=11755.44pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2017-03,opm_percentage,Stored OPM=-4372.0 vs computed=43.28 (diff=4415.28pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2018-03,opm_percentage,Stored OPM=-9197.0 vs computed=56.65 (diff=9253.65pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2019-03,opm_percentage,Stored OPM=-5414.0 vs computed=48.79 (diff=5462.79pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2020-03,opm_percentage,Stored OPM=-11728.0 vs computed=51.44 (diff=11779.44pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2021-03,opm_percentage,Stored OPM=-6957.0 vs computed=51.23 (diff=7008.23pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2022-03,opm_percentage,Stored OPM=-2948.0 vs computed=51.12 (diff=2999.12pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2023-03,opm_percentage,Stored OPM=6329.0 vs computed=40.45 (diff=6288.55pp),WARNING
+DQ-10,profitandloss,BANKBARODA,2024-03,opm_percentage,Stored OPM=4102.0 vs computed=37.49 (diff=4064.51pp),WARNING
+DQ-10,profitandloss,CANBK,2013-03,opm_percentage,Stored OPM=655.0 vs computed=21.18 (diff=633.82pp),WARNING
+DQ-10,profitandloss,CANBK,2014-03,opm_percentage,Stored OPM=-672.0 vs computed=24.35 (diff=696.35pp),WARNING
+DQ-10,profitandloss,CANBK,2015-03,opm_percentage,Stored OPM=-621.0 vs computed=23.51 (diff=644.51pp),WARNING
+DQ-10,profitandloss,CANBK,2016-03,opm_percentage,Stored OPM=-8008.0 vs computed=40.38 (diff=8048.38pp),WARNING
+DQ-10,profitandloss,CANBK,2017-03,opm_percentage,Stored OPM=-5775.0 vs computed=37.85 (diff=5812.85pp),WARNING
+DQ-10,profitandloss,CANBK,2018-03,opm_percentage,Stored OPM=-13350.0 vs computed=61.87 (diff=13411.87pp),WARNING
+DQ-10,profitandloss,CANBK,2019-03,opm_percentage,Stored OPM=-11590.0 vs computed=56.73 (diff=11646.73pp),WARNING
+DQ-10,profitandloss,CANBK,2020-03,opm_percentage,Stored OPM=-12867.0 vs computed=53.88 (diff=12920.88pp),WARNING
+DQ-10,profitandloss,CANBK,2021-03,opm_percentage,Stored OPM=-18367.0 vs computed=61.83 (diff=18428.83pp),WARNING
+DQ-10,profitandloss,CANBK,2022-03,opm_percentage,Stored OPM=-13657.0 vs computed=58.39 (diff=13715.39pp),WARNING
+DQ-10,profitandloss,CANBK,2023-03,opm_percentage,Stored OPM=-9877.0 vs computed=49.8 (diff=9926.8pp),WARNING
+DQ-10,profitandloss,CANBK,2024-03,opm_percentage,Stored OPM=-7745.0 vs computed=41.75 (diff=7786.75pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2013-03,opm_percentage,Stored OPM=472.0 vs computed=26.77 (diff=445.23pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2014-03,opm_percentage,Stored OPM=578.0 vs computed=28.42 (diff=549.58pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2015-03,opm_percentage,Stored OPM=696.0 vs computed=28.56 (diff=667.44pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2016-03,opm_percentage,Stored OPM=899.0 vs computed=30.04 (diff=868.96pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2017-03,opm_percentage,Stored OPM=1143.0 vs computed=28.16 (diff=1114.84pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2018-03,opm_percentage,Stored OPM=1451.0 vs computed=26.1 (diff=1424.9pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2019-03,opm_percentage,Stored OPM=1888.0 vs computed=22.96 (diff=1865.04pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2020-03,opm_percentage,Stored OPM=1699.0 vs computed=27.79 (diff=1671.21pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2021-03,opm_percentage,Stored OPM=2094.0 vs computed=30.4 (diff=2063.6pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2022-03,opm_percentage,Stored OPM=2924.0 vs computed=28.83 (diff=2895.17pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2023-03,opm_percentage,Stored OPM=3515.0 vs computed=28.1 (diff=3486.9pp),WARNING
+DQ-10,profitandloss,CHOLAFIN,2024-03,opm_percentage,Stored OPM=4548.0 vs computed=28.1 (diff=4519.9pp),WARNING
+DQ-10,profitandloss,CIPLA,2013-03,opm_percentage,Stored OPM=2214.0 vs computed=73.26 (diff=2140.74pp),WARNING
+DQ-10,profitandloss,CIPLA,2014-03,opm_percentage,Stored OPM=2147.0 vs computed=78.9 (diff=2068.1pp),WARNING
+DQ-10,profitandloss,CIPLA,2015-03,opm_percentage,Stored OPM=2163.0 vs computed=80.94 (diff=2082.06pp),WARNING
+DQ-10,profitandloss,CIPLA,2016-03,opm_percentage,Stored OPM=2480.0 vs computed=82.02 (diff=2397.98pp),WARNING
+DQ-10,profitandloss,CIPLA,2017-03,opm_percentage,Stored OPM=2496.0 vs computed=82.66 (diff=2413.34pp),WARNING
+DQ-10,profitandloss,CIPLA,2018-03,opm_percentage,Stored OPM=2826.0 vs computed=81.35 (diff=2744.65pp),WARNING
+DQ-10,profitandloss,CIPLA,2019-03,opm_percentage,Stored OPM=3097.0 vs computed=81.07 (diff=3015.93pp),WARNING
+DQ-10,profitandloss,CIPLA,2020-03,opm_percentage,Stored OPM=3206.0 vs computed=81.29 (diff=3124.71pp),WARNING
+DQ-10,profitandloss,CIPLA,2021-03,opm_percentage,Stored OPM=4252.0 vs computed=77.8 (diff=4174.2pp),WARNING
+DQ-10,profitandloss,CIPLA,2022-03,opm_percentage,Stored OPM=4553.0 vs computed=79.08 (diff=4473.92pp),WARNING
+DQ-10,profitandloss,CIPLA,2023-03,opm_percentage,Stored OPM=5027.0 vs computed=77.91 (diff=4949.09pp),WARNING
+DQ-10,profitandloss,CIPLA,2024-03,opm_percentage,Stored OPM=6291.0 vs computed=75.59 (diff=6215.41pp),WARNING
+DQ-10,profitandloss,COALINDIA,2013-03,opm_percentage,Stored OPM=18087.0 vs computed=73.52 (diff=18013.48pp),WARNING
+DQ-10,profitandloss,COALINDIA,2014-03,opm_percentage,Stored OPM=17766.0 vs computed=74.84 (diff=17691.16pp),WARNING
+DQ-10,profitandloss,COALINDIA,2015-03,opm_percentage,Stored OPM=17343.0 vs computed=76.6 (diff=17266.4pp),WARNING
+DQ-10,profitandloss,COALINDIA,2016-03,opm_percentage,Stored OPM=18714.0 vs computed=75.96 (diff=18638.04pp),WARNING
+DQ-10,profitandloss,COALINDIA,2017-03,opm_percentage,Stored OPM=12448.0 vs computed=84.07 (diff=12363.93pp),WARNING
+DQ-10,profitandloss,COALINDIA,2018-03,opm_percentage,Stored OPM=9288.0 vs computed=89.1 (diff=9198.9pp),WARNING
+DQ-10,profitandloss,COALINDIA,2019-03,opm_percentage,Stored OPM=25007.0 vs computed=74.89 (diff=24932.11pp),WARNING
+DQ-10,profitandloss,COALINDIA,2020-03,opm_percentage,Stored OPM=21581.0 vs computed=77.54 (diff=21503.46pp),WARNING
+DQ-10,profitandloss,COALINDIA,2021-03,opm_percentage,Stored OPM=18628.0 vs computed=79.31 (diff=18548.69pp),WARNING
+DQ-10,profitandloss,COALINDIA,2022-03,opm_percentage,Stored OPM=24721.0 vs computed=77.47 (diff=24643.53pp),WARNING
+DQ-10,profitandloss,COALINDIA,2023-03,opm_percentage,Stored OPM=44232.0 vs computed=68.01 (diff=44163.99pp),WARNING
+DQ-10,profitandloss,COALINDIA,2024-03,opm_percentage,Stored OPM=47971.0 vs computed=66.29 (diff=47904.71pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2013-03,opm_percentage,Stored OPM=3534.0 vs computed=35.22 (diff=3498.78pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2014-03,opm_percentage,Stored OPM=5602.0 vs computed=31.74 (diff=5570.26pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2015-03,opm_percentage,Stored OPM=7214.0 vs computed=31.9 (diff=7182.1pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2016-03,opm_percentage,Stored OPM=9037.0 vs computed=31.75 (diff=9005.25pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2017-03,opm_percentage,Stored OPM=11374.0 vs computed=32.56 (diff=11341.44pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2018-03,opm_percentage,Stored OPM=13374.0 vs computed=34.63 (diff=13339.37pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2019-03,opm_percentage,Stored OPM=16592.0 vs computed=33.15 (diff=16558.85pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2020-03,opm_percentage,Stored OPM=14593.0 vs computed=37.2 (diff=14555.8pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2021-03,opm_percentage,Stored OPM=16848.0 vs computed=40.81 (diff=16807.19pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2022-03,opm_percentage,Stored OPM=20795.0 vs computed=41.61 (diff=20753.39pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2023-03,opm_percentage,Stored OPM=29932.0 vs computed=36.92 (diff=29895.08pp),WARNING
+DQ-10,profitandloss,HDFCBANK,2024-03,opm_percentage,Stored OPM=-44685.0 vs computed=61.41 (diff=44746.41pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2013-03,opm_percentage,Stored OPM=525.0 vs computed=96.27 (diff=428.73pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2014-03,opm_percentage,Stored OPM=605.0 vs computed=96.48 (diff=508.52pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2015-03,opm_percentage,Stored OPM=874.0 vs computed=96.79 (diff=777.21pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2016-03,opm_percentage,Stored OPM=953.0 vs computed=94.74 (diff=858.26pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2017-03,opm_percentage,Stored OPM=972.0 vs computed=96.83 (diff=875.17pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2018-03,opm_percentage,Stored OPM=1074.0 vs computed=96.67 (diff=977.33pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2019-03,opm_percentage,Stored OPM=1215.0 vs computed=96.87 (diff=1118.13pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2020-03,opm_percentage,Stored OPM=1141.0 vs computed=96.12 (diff=1044.88pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2021-03,opm_percentage,Stored OPM=1235.0 vs computed=98.27 (diff=1136.73pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2022-03,opm_percentage,Stored OPM=778.0 vs computed=98.84 (diff=679.16pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2023-03,opm_percentage,Stored OPM=80.0 vs computed=99.89 (diff=19.89pp),WARNING
+DQ-10,profitandloss,HDFCLIFE,2024-03,opm_percentage,Stored OPM=531.0 vs computed=99.48 (diff=431.52pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2014-03,opm_percentage,Stored OPM=3553.0 vs computed=85.94 (diff=3467.06pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2015-03,opm_percentage,Stored OPM=3520.0 vs computed=87.22 (diff=3432.78pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2016-03,opm_percentage,Stored OPM=4424.0 vs computed=84.45 (diff=4339.55pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2017-03,opm_percentage,Stored OPM=4585.0 vs computed=83.97 (diff=4501.03pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2018-03,opm_percentage,Stored OPM=5334.0 vs computed=83.57 (diff=5250.43pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2019-03,opm_percentage,Stored OPM=5025.0 vs computed=85.21 (diff=4939.79pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2020-03,opm_percentage,Stored OPM=4070.0 vs computed=86.09 (diff=3983.91pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2021-03,opm_percentage,Stored OPM=4058.0 vs computed=86.9 (diff=3971.1pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2022-03,opm_percentage,Stored OPM=3256.0 vs computed=88.98 (diff=3167.02pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2023-03,opm_percentage,Stored OPM=4099.0 vs computed=88.0 (diff=4011.0pp),WARNING
+DQ-10,profitandloss,HEROMOTOCO,2024-03,opm_percentage,Stored OPM=5235.0 vs computed=86.15 (diff=5148.85pp),WARNING
+DQ-10,profitandloss,HINDALCO,2013-03,opm_percentage,Stored OPM=7699.0 vs computed=90.4 (diff=7608.6pp),WARNING
+DQ-10,profitandloss,HINDALCO,2014-03,opm_percentage,Stored OPM=8024.0 vs computed=90.85 (diff=7933.15pp),WARNING
+DQ-10,profitandloss,HINDALCO,2015-03,opm_percentage,Stored OPM=8844.0 vs computed=91.52 (diff=8752.48pp),WARNING
+DQ-10,profitandloss,HINDALCO,2016-03,opm_percentage,Stored OPM=7778.0 vs computed=92.12 (diff=7685.88pp),WARNING
+DQ-10,profitandloss,HINDALCO,2017-03,opm_percentage,Stored OPM=12317.0 vs computed=87.71 (diff=12229.29pp),WARNING
+DQ-10,profitandloss,HINDALCO,2018-03,opm_percentage,Stored OPM=13695.0 vs computed=88.11 (diff=13606.89pp),WARNING
+DQ-10,profitandloss,HINDALCO,2019-03,opm_percentage,Stored OPM=15511.0 vs computed=88.12 (diff=15422.88pp),WARNING
+DQ-10,profitandloss,HINDALCO,2020-03,opm_percentage,Stored OPM=14306.0 vs computed=87.89 (diff=14218.11pp),WARNING
+DQ-10,profitandloss,HINDALCO,2021-03,opm_percentage,Stored OPM=17559.0 vs computed=86.7 (diff=17472.3pp),WARNING
+DQ-10,profitandloss,HINDALCO,2022-03,opm_percentage,Stored OPM=28347.0 vs computed=85.47 (diff=28261.53pp),WARNING
+DQ-10,profitandloss,HINDALCO,2023-03,opm_percentage,Stored OPM=22666.0 vs computed=89.85 (diff=22576.15pp),WARNING
+DQ-10,profitandloss,HINDALCO,2024-03,opm_percentage,Stored OPM=23872.0 vs computed=88.95 (diff=23783.05pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2013-03,opm_percentage,Stored OPM=4220.0 vs computed=84.37 (diff=4135.63pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2014-03,opm_percentage,Stored OPM=4759.0 vs computed=83.72 (diff=4675.28pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2015-03,opm_percentage,Stored OPM=5412.0 vs computed=83.07 (diff=5328.93pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2016-03,opm_percentage,Stored OPM=5910.0 vs computed=81.64 (diff=5828.36pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2017-03,opm_percentage,Stored OPM=6328.0 vs computed=80.92 (diff=6247.08pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2018-03,opm_percentage,Stored OPM=7499.0 vs computed=78.9 (diff=7420.1pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2019-03,opm_percentage,Stored OPM=8880.0 vs computed=77.41 (diff=8802.59pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2020-03,opm_percentage,Stored OPM=9861.0 vs computed=75.21 (diff=9785.79pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2021-03,opm_percentage,Stored OPM=11626.0 vs computed=75.28 (diff=11550.72pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2022-03,opm_percentage,Stored OPM=12857.0 vs computed=75.49 (diff=12781.51pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2023-03,opm_percentage,Stored OPM=14147.0 vs computed=76.65 (diff=14070.35pp),WARNING
+DQ-10,profitandloss,HINDUNILVR,2024-03,opm_percentage,Stored OPM=14659.0 vs computed=76.32 (diff=14582.68pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2013-03,opm_percentage,Stored OPM=-15085.0 vs computed=70.59 (diff=15155.59pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2014-03,opm_percentage,Stored OPM=-13084.0 vs computed=66.4 (diff=13150.4pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2015-03,opm_percentage,Stored OPM=-16120.0 vs computed=70.53 (diff=16190.53pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2016-03,opm_percentage,Stored OPM=-26955.0 vs computed=88.12 (diff=27043.12pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2017-03,opm_percentage,Stored OPM=-37737.0 vs computed=104.76 (diff=37841.76pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2018-03,opm_percentage,Stored OPM=-44906.0 vs computed=117.12 (diff=45023.12pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2019-03,opm_percentage,Stored OPM=-50971.0 vs computed=116.38 (diff=51087.38pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2020-03,opm_percentage,Stored OPM=-45190.0 vs computed=100.62 (diff=45290.62pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2021-03,opm_percentage,Stored OPM=-44805.0 vs computed=102.41 (diff=44907.41pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2022-03,opm_percentage,Stored OPM=-26558.0 vs computed=84.69 (diff=26642.69pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2023-03,opm_percentage,Stored OPM=-17341.0 vs computed=72.57 (diff=17413.57pp),WARNING
+DQ-10,profitandloss,ICICIBANK,2024-03,opm_percentage,Stored OPM=-14152.0 vs computed=62.41 (diff=14214.41pp),WARNING
+DQ-10,profitandloss,ICICIGI,2013-03,opm_percentage,Stored OPM=-178.0 vs computed=104.46 (diff=282.46pp),WARNING
+DQ-10,profitandloss,ICICIGI,2014-03,opm_percentage,Stored OPM=-225.0 vs computed=105.19 (diff=330.19pp),WARNING
+DQ-10,profitandloss,ICICIGI,2015-03,opm_percentage,Stored OPM=-221.0 vs computed=105.24 (diff=326.24pp),WARNING
+DQ-10,profitandloss,ICICIGI,2016-03,opm_percentage,Stored OPM=764.0 vs computed=87.34 (diff=676.66pp),WARNING
+DQ-10,profitandloss,ICICIGI,2017-03,opm_percentage,Stored OPM=919.0 vs computed=87.78 (diff=831.22pp),WARNING
+DQ-10,profitandloss,ICICIGI,2018-03,opm_percentage,Stored OPM=-262.0 vs computed=103.79 (diff=365.79pp),WARNING
+DQ-10,profitandloss,ICICIGI,2019-03,opm_percentage,Stored OPM=1669.0 vs computed=85.05 (diff=1583.95pp),WARNING
+DQ-10,profitandloss,ICICIGI,2020-03,opm_percentage,Stored OPM=1772.0 vs computed=84.61 (diff=1687.39pp),WARNING
+DQ-10,profitandloss,ICICIGI,2021-03,opm_percentage,Stored OPM=2072.0 vs computed=82.97 (diff=1989.03pp),WARNING
+DQ-10,profitandloss,ICICIGI,2022-03,opm_percentage,Stored OPM=1016.0 vs computed=93.66 (diff=922.34pp),WARNING
+DQ-10,profitandloss,ICICIGI,2023-03,opm_percentage,Stored OPM=1264.0 vs computed=92.93 (diff=1171.07pp),WARNING
+DQ-10,profitandloss,ICICIGI,2024-03,opm_percentage,Stored OPM=2577.0 vs computed=87.42 (diff=2489.58pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2013-03,opm_percentage,Stored OPM=745.0 vs computed=96.28 (diff=648.72pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2014-03,opm_percentage,Stored OPM=1504.0 vs computed=93.13 (diff=1410.87pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2015-03,opm_percentage,Stored OPM=1655.0 vs computed=95.2 (diff=1559.8pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2016-03,opm_percentage,Stored OPM=1842.0 vs computed=91.17 (diff=1750.83pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2017-03,opm_percentage,Stored OPM=1806.0 vs computed=95.22 (diff=1710.78pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2018-03,opm_percentage,Stored OPM=1771.0 vs computed=95.44 (diff=1675.56pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2019-03,opm_percentage,Stored OPM=541.0 vs computed=98.7 (diff=442.3pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2020-03,opm_percentage,Stored OPM=-319.0 vs computed=101.52 (diff=420.52pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2021-03,opm_percentage,Stored OPM=-390.0 vs computed=100.47 (diff=490.47pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2022-03,opm_percentage,Stored OPM=-2163.0 vs computed=103.4 (diff=2266.4pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2023-03,opm_percentage,Stored OPM=-1757.0 vs computed=103.48 (diff=1860.48pp),WARNING
+DQ-10,profitandloss,ICICIPRULI,2024-03,opm_percentage,Stored OPM=-1829.0 vs computed=102.03 (diff=1931.03pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2013-03,opm_percentage,Stored OPM=286.0 vs computed=27.88 (diff=258.12pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2014-03,opm_percentage,Stored OPM=335.0 vs computed=30.95 (diff=304.05pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2015-03,opm_percentage,Stored OPM=288.0 vs computed=32.33 (diff=255.67pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2016-03,opm_percentage,Stored OPM=329.0 vs computed=35.28 (diff=293.72pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2017-03,opm_percentage,Stored OPM=379.0 vs computed=39.46 (diff=339.54pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2018-03,opm_percentage,Stored OPM=942.0 vs computed=37.93 (diff=904.07pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2019-03,opm_percentage,Stored OPM=-437.0 vs computed=41.7 (diff=478.7pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2020-03,opm_percentage,Stored OPM=-553.0 vs computed=43.81 (diff=596.81pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2021-03,opm_percentage,Stored OPM=-2469.0 vs computed=55.16 (diff=2524.16pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2022-03,opm_percentage,Stored OPM=-839.0 vs computed=51.39 (diff=890.39pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2023-03,opm_percentage,Stored OPM=2067.0 vs computed=42.69 (diff=2024.31pp),WARNING
+DQ-10,profitandloss,INDUSINDBK,2024-03,opm_percentage,Stored OPM=2978.0 vs computed=38.55 (diff=2939.45pp),WARNING
+DQ-10,profitandloss,JIOFIN,2023-03,opm_percentage,Stored OPM=88.0 vs computed=86.67 (diff=1.33pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2013-03,opm_percentage,Stored OPM=-1789.0 vs computed=60.92 (diff=1849.92pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2014-03,opm_percentage,Stored OPM=-1379.0 vs computed=58.84 (diff=1437.84pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2015-03,opm_percentage,Stored OPM=-3366.0 vs computed=72.96 (diff=3438.96pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2016-03,opm_percentage,Stored OPM=-2263.0 vs computed=56.57 (diff=2319.57pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2017-03,opm_percentage,Stored OPM=-3965.0 vs computed=66.44 (diff=4031.44pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2018-03,opm_percentage,Stored OPM=-4141.0 vs computed=66.87 (diff=4207.87pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2019-03,opm_percentage,Stored OPM=-5114.0 vs computed=66.23 (diff=5180.23pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2020-03,opm_percentage,Stored OPM=-5005.0 vs computed=67.45 (diff=5072.45pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2021-03,opm_percentage,Stored OPM=-9958.0 vs computed=90.83 (diff=10048.83pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2022-03,opm_percentage,Stored OPM=-8512.0 vs computed=90.98 (diff=8602.98pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2023-03,opm_percentage,Stored OPM=-5746.0 vs computed=79.44 (diff=5825.44pp),WARNING
+DQ-10,profitandloss,KOTAKBANK,2024-03,opm_percentage,Stored OPM=-13382.0 vs computed=83.67 (diff=13465.67pp),WARNING
+DQ-10,profitandloss,SUNPHARMA,2024-03,opm_percentage,Stored OPM=28.0 vs computed=26.84 (diff=1.16pp),WARNING
+DQ-10,profitandloss,INDIGO,2013-03,opm_percentage,Stored OPM=855.0 vs computed=90.71 (diff=764.29pp),WARNING
+DQ-10,profitandloss,INDIGO,2014-03,opm_percentage,Stored OPM=433.0 vs computed=96.11 (diff=336.89pp),WARNING
+DQ-10,profitandloss,INDIGO,2015-03,opm_percentage,Stored OPM=1904.0 vs computed=86.33 (diff=1817.67pp),WARNING
+DQ-10,profitandloss,INDIGO,2016-03,opm_percentage,Stored OPM=3164.0 vs computed=80.4 (diff=3083.6pp),WARNING
+DQ-10,profitandloss,INDIGO,2017-03,opm_percentage,Stored OPM=2219.0 vs computed=88.06 (diff=2130.94pp),WARNING
+DQ-10,profitandloss,INDIGO,2018-03,opm_percentage,Stored OPM=3030.0 vs computed=86.84 (diff=2943.16pp),WARNING
+DQ-10,profitandloss,INDIGO,2019-03,opm_percentage,Stored OPM=-151.0 vs computed=100.53 (diff=251.53pp),WARNING
+DQ-10,profitandloss,INDIGO,2020-03,opm_percentage,Stored OPM=4069.0 vs computed=88.62 (diff=3980.38pp),WARNING
+DQ-10,profitandloss,INDIGO,2021-03,opm_percentage,Stored OPM=2.0 vs computed=99.98 (diff=97.98pp),WARNING
+DQ-10,profitandloss,INDIGO,2022-03,opm_percentage,Stored OPM=558.0 vs computed=97.85 (diff=460.15pp),WARNING
+DQ-10,profitandloss,INDIGO,2023-03,opm_percentage,Stored OPM=6521.0 vs computed=88.02 (diff=6432.98pp),WARNING
+DQ-10,profitandloss,INDIGO,2024-03,opm_percentage,Stored OPM=16331.0 vs computed=76.3 (diff=16254.7pp),WARNING
+DQ-12,profitandloss,ADANIENSOL,2014-03,sales,sales=0 is zero or negative,WARNING
+DQ-13,analysis,SBILIFE,,compounded_sales_growth,Unparseable text: 'TTM:            43%',WARNING
+DQ-13,analysis,TCS,,compounded_sales_growth,Unparseable text: 'TTM:            5%',WARNING
+DQ-13,analysis,WIPRO,,compounded_sales_growth,Unparseable text: 'TTM:           -3%',WARNING
+DQ-13,analysis,HDFCBANK,,compounded_sales_growth,Unparseable text: 'TTM:            47%',WARNING
+DQ-13,analysis,INFY,,compounded_sales_growth,Unparseable text: 'TTM:            3%',WARNING
+DQ-13,analysis,SBILIFE,,compounded_profit_growth,Unparseable text: 'TTM:                 18%',WARNING
+DQ-13,analysis,TCS,,compounded_profit_growth,Unparseable text: 'TTM:                 8%',WARNING
+DQ-13,analysis,WIPRO,,compounded_profit_growth,Unparseable text: 'TTM:                 1%',WARNING
+DQ-13,analysis,HDFCBANK,,compounded_profit_growth,Unparseable text: 'TTM:                27%',WARNING
+DQ-13,analysis,INFY,,compounded_profit_growth,Unparseable text: 'TTM:                 8%',WARNING
+DQ-13,analysis,SBILIFE,,stock_price_cagr,Unparseable text: '1 Year:         -2%',WARNING
+DQ-13,analysis,WIPRO,,stock_price_cagr,Unparseable text: '3 Years:      -1%',WARNING
+DQ-13,analysis,SBILIFE,,roe,Unparseable text: 'Last Year:      12%',WARNING
+DQ-13,analysis,TCS,,roe,Unparseable text: 'Last Year:       52%',WARNING
+DQ-13,analysis,WIPRO,,roe,Unparseable text: 'Last Year:       14%',WARNING
+DQ-13,analysis,HDFCBANK,,roe,Unparseable text: 'Last Year:    17%',WARNING
+DQ-13,analysis,INFY,,roe,Unparseable text: 'Last Year:     32%',WARNING
+DQ-14,profitandloss,JIOFIN,2023-03,eps,net_profit=31 > 0 but eps=nan,WARNING
+DQ-14,profitandloss,JSWENERGY,2018-03,eps,net_profit=85 > 0 but eps=0.0,WARNING
+DQ-14,profitandloss,LICI,2019-03,eps,net_profit=2627 > 0 but eps=nan,WARNING
+DQ-14,profitandloss,LICI,2020-03,eps,net_profit=2710 > 0 but eps=nan,WARNING
+DQ-14,profitandloss,SIEMENS,2011-09,eps,net_profit=868 > 0 but eps=nan,WARNING
+DQ-14,profitandloss,TATAPOWER,2013-03,eps,net_profit=123 > 0 but eps=0.0,WARNING
+DQ-14,profitandloss,TATAPOWER,2014-03,eps,net_profit=12 > 0 but eps=-1.0,WARNING
+DQ-14,profitandloss,VBL,2016-12,eps,net_profit=48 > 0 but eps=0.0,WARNING
+DQ-14,profitandloss,ZOMATO,2024-03,eps,net_profit=351 > 0 but eps=0.0,WARNING
+DQ-15,profitandloss,BHARTIARTL,2019-03,dividend_payout,Payout=244.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,BRITANNIA,2021-03,dividend_payout,Payout=204.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,M&M,2020-03,dividend_payout,Payout=205.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,SBIN,2017-03,dividend_payout,Payout=859.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,TATAPOWER,2015-03,dividend_payout,Payout=210.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,VEDL,2023-03,dividend_payout,Payout=357.0% exceeds 200% cap,WARNING
+DQ-15,profitandloss,VEDL,2024-03,dividend_payout,Payout=259.0% exceeds 200% cap,WARNING
+DQ-16,profitandloss,JIOFIN,,year,Only 2 years of data (minimum 5 required),WARNING
+DQ-16,profitandloss,AGTL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,balancesheet,SBIN,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,balancesheet,JIOFIN,,year,Only 3 years of data (minimum 5 required),WARNING
+DQ-16,balancesheet,AGTL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,balancesheet,VBL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,cashflow,JIOFIN,,year,Only 2 years of data (minimum 5 required),WARNING
+DQ-16,cashflow,ATGL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,SBIN,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,ZYDUSLIFE,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,UNITDSPR,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,JIOFIN,,year,Only 2 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,ATGL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,AGTL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,VBL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,ZOMATO,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,WIPRO,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,financial_ratios,VEDL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,UNIONBANK,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,ZYDUSLIFE,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,UNITDSPR,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,AGTL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,VBL,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,ZOMATO,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,ULTRACEMCO,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,WIPRO,,year,Only 0 years of data (minimum 5 required),WARNING
+DQ-16,market_cap,VEDL,,year,Only 0 years of data (minimum 5 required),WARNING
