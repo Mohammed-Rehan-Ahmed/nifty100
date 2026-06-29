@@ -382,4 +382,3 @@ validated against source financial data by the project team.
 
 *Nifty 100 Financial Intelligence Platform*
 *Version 1.0 | June 2026 | Data Analytics Division*
-*Confidential — Internal Use Only*

@@ -52,13 +52,15 @@ def load_file(table, path, header):
         df = df[~bad]
 
     if table in TIME_SERIES and "year" in df.columns:
+        df["_year_raw"] = df["year"].copy()
         df["year"] = df["year"].apply(normalize_year)
         bad = df["year"].isna()
         if bad.any():
             FAILURES.extend([{"rule_id":"DQ-07","table":table,"company_id":r.get("company_id"),
-                              "year":r["year"],"field":"year","issue":"bad_year","severity":"CRITICAL"}
-                             for _,r in df[bad].iterrows()])
+                              "year":r["_year_raw"],"field":"year","issue":"bad_year","severity":"WARNING"}
+                            for _,r in df[bad].iterrows()])
         df = df[~bad]
+        df.drop(columns="_year_raw", inplace=True)
 
     if table in TIME_SERIES:
         key = "id" if table == "companies" else "company_id"

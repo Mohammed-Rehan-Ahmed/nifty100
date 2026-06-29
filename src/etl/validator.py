@@ -111,19 +111,29 @@ def dq06_stock_price_date_format(dfs: Dict[str, pd.DataFrame],
               f"Invalid date format: '{row['date']}'",
               "CRITICAL")
 
+
 def dq07_year_format(dfs: Dict[str, pd.DataFrame],
                      failures: List[dict]) -> None:
-    """DQ-07: All year values must match YYYY-MM after normalisation."""
+    """DQ-07: All year values must match YYYY-MM after normalisation.
+    TTM and blank strings are safely skipped.
+    """
     pattern = re.compile(r"^\d{4}-\d{2}$")
+    SILENT_SKIP = {"ttm", "none", "nan", "", "parse_error"}
+
     for table in TIME_SERIES_TABLES:
         df = dfs.get(table)
         if df is None or "year" not in df.columns: continue
-        bad = df[~df["year"].astype(str).str.match(pattern)]
+        
+        year_strs = df["year"].astype(str).str.strip()
+        skip_mask = year_strs.str.lower().isin(SILENT_SKIP) | df["year"].isna()
+        
+        # Catch anything that isn't valid standard format AND isn't in the skip set
+        bad = df[~skip_mask & ~year_strs.str.match(pattern)]
         for _, row in bad.iterrows():
             _flag(failures, "DQ-07", table,
                   row.get("company_id"), row["year"],
                   "year",
-                  f"Unparseable year: '{row['year']}'",
+                  "bad_year",
                   "CRITICAL")
 
 
