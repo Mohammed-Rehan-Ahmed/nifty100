@@ -52,3 +52,27 @@ def test_roce():
     cap  = 200 + 300 + 100
     expected = round(ebit / cap * 100, 4)
     assert round(df["return_on_capital_pct"].iloc[0], 4) == expected
+
+def test_de_high_leverage_flag():
+    row = make_row(borrowings=2000, equity_capital=200, reserves=100, broad_sector="IT")
+    df = compute_profitability(row)
+    df = compute_leverage(df, {"Financials"})
+    assert df["de_flag"].iloc[0] == "HIGH_DE"
+
+def test_de_high_leverage_suppressed_financials():
+    row = make_row(borrowings=2000, equity_capital=200, reserves=100, broad_sector="Financials")
+    df = compute_profitability(row)
+    df = compute_leverage(df, {"Financials"})
+    assert df["de_flag"].iloc[0] == ""
+
+def test_icr_warning_low():
+    row = make_row(operating_profit=20, other_income=0, interest=20)
+    df = compute_profitability(row)
+    df = compute_leverage(df, {"Financials"})
+    assert df["icr_warning"].iloc[0] == True
+
+def test_net_debt():
+    row = make_row(borrowings=500, investments=100)
+    df = compute_profitability(row)
+    df = compute_leverage(df, {"Financials"})
+    assert df["net_debt_cr"].iloc[0] == 400

@@ -1,18 +1,32 @@
-# Virtual Environment
-.venv/
-env/
-ENV/
+python -c "
+content = '''# Database
+data/nifty100.db
 
-# Python caching
+# Environment
+.env
+
+# Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
+.pytest_cache/
+.venv/
 
-# Local Data & Database Outputs (Keep raw files if needed, but skip generated binaries/logs)
-data/nifty100.db
-data/load_audit.csv
-data/validation_failures.csv
+# Data outputs
+data/*.csv
+data/*.xlsx
 
-# Environment configurations containing credentials
-.env
+# Reports
+reports/
+output/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+'''
+open('.gitignore','w').write(content)
+print('Done')
+"

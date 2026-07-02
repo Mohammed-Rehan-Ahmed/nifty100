@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
 
+
 load_dotenv()
 DB_PATH = os.getenv("DB_PATH", "data/nifty100.db")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -83,6 +84,10 @@ def compute_leverage(df, financial_sectors):
         lambda x: "Debt Free" if pd.isna(x) else round(x, 2)
     )
 
+    df["icr_warning"] = np.where(
+        df["interest_coverage"] < 1.5, True, False
+    )
+
     # Net Debt = borrowings - investments
     df["net_debt_cr"] = df["borrowings"].fillna(0) - df["investments"].fillna(0)
 
@@ -135,18 +140,25 @@ def compute_cashflow_kpis(df):
 
 
 def compute_per_share(df):
-    """EPS, Book Value Per Share."""
+    """EPS, Book Value Per Share with defensive data casting."""
     df["earnings_per_share"] = df["eps"].fillna(np.nan)
+    
+    # Clean face_value safely up front to handle text artifacts or empty strings
+    fv_numeric = pd.to_numeric(df["face_value"], errors="coerce")
+    
     df["shares_outstanding"] = np.where(
-        df["face_value"].fillna(0) == 0, np.nan,
-        df["equity_capital"].fillna(0) / df["face_value"].fillna(1) * 1e7
+        fv_numeric.fillna(0) == 0, np.nan,
+        df["equity_capital"].fillna(0) / fv_numeric.fillna(1) * 1e7
     )
+    
     df["book_value_per_share"] = np.where(
         df["shares_outstanding"].isna(), np.nan,
         safe_div(df["total_equity"] * 1e7, df["shares_outstanding"])
     )
+    
     df["dividend_payout_ratio_pct"] = df["dividend_payout"].fillna(np.nan)
     df["total_debt_cr"] = df["borrowings"].fillna(0)
+    
     return df
 
 
@@ -187,8 +199,16 @@ def run_ratio_engine():
     ]
     out = df[[c for c in RATIO_COLS if c in df.columns]].copy()
 
+    cagr = pd.read_sql("SELECT company_id, revenue_cagr_5yr, pat_cagr_5yr, eps_cagr_5yr FROM cagr_metrics", conn)
+    out = out.merge(cagr, on="company_id", how="left")
+
     out.to_sql("financial_ratios", conn, if_exists="replace", index=False)
     logger.info("financial_ratios: %d rows written", len(out))
+
+    edge_cases = out[out[["return_on_equity_pct","return_on_capital_pct","debt_to_equity"]].isnull().any(axis=1)][["company_id","year"]].copy()
+    edge_cases["note"] = "One or more KPIs null — negative equity or zero denominator"
+    edge_cases.to_csv("data/ratio_edge_cases.csv", index=False)
+    logger.info("ratio_edge_cases.csv: %d rows", len(edge_cases))
 
     out.to_csv("data/financial_ratios_computed.csv", index=False)
     conn.close()

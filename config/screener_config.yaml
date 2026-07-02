@@ -35,6 +35,8 @@ presets:
     min_revenue_cagr_3yr: 10
     min_fcf_latest: 0
     rank_by: revenue_cagr_3yr
+    max_de: 2
+    min_pat_cagr_3yr: 5
 
 thresholds:
   composite_score:

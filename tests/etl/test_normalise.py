@@ -14,9 +14,9 @@ def test_year_int():          assert normalize_year("2023")     == "2023-03"
 def test_year_already_norm(): assert normalize_year("2023-03")  == "2023-03"
 def test_year_dec22():        assert normalize_year("Dec-22")   == "2022-12"
 def test_year_jun23():        assert normalize_year("Jun-23")   == "2023-06"
-def test_year_garbage():      assert normalize_year("xyz")      == "PARSE_ERROR"
-def test_year_none():         assert normalize_year(None)       == "PARSE_ERROR"
-def test_year_empty():        assert normalize_year("")         == "PARSE_ERROR"
+def test_year_garbage():      assert normalize_year("xyz")      ==  None
+def test_year_none():         assert normalize_year(None)       ==  None
+def test_year_empty():        assert normalize_year("")         ==  None
 def test_year_mar13():        assert normalize_year("Mar-13")   == "2013-03"
 def test_year_jan2020():      assert normalize_year("Jan 2020") == "2020-01"
 
